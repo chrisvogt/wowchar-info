@@ -1,0 +1,26 @@
+{
+  "name": "WowChar",
+  "version": "0.0.1",
+  "authors": [
+    "Chris Vogt <mail@chrisvogt.me>"
+  ],
+  "description": "WoW Character Viewer with CakePHP 2.",
+  "main": "webroot/index.php",
+  "keywords": [
+    "Battle.NET"
+  ],
+  "license": "MIT",
+  "homepage": "wowchar.info",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "webroot/components/",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jasny-bootstrap": "~3.1.3",
+    "share-button": "~0.5.0"
+  }
+}
