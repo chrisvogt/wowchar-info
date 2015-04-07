@@ -12,13 +12,15 @@
  ╚═════╝ ╚═╝  ╚═══╝   ╚═════╝
      chrisvogt.me | @c1v0
    -->
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <link rel="shortcut icon" href="favicon.png">
 
     <title>WoW Character Viewer - WOWCHAR.info</title>
+
+    <meta name="description" content="View your WoW characters and generate links to share them on Facebook and other sites.">
+    <meta name="author" content="http://www.chrisvogt.me">
+    <link rel="shortcut icon" href="favicon.png">
+
+    <?php echo $this->CharOg->build($character); ?>
 
     <link href="//maxcdn.bootstrapcdn.com/bootswatch/3.3.4/darkly/bootstrap.min.css" rel="stylesheet">
     <link href="components/jasny-bootstrap/dist/css/jasny-bootstrap.min.css" rel="stylesheet">

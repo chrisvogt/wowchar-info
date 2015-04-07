@@ -11,13 +11,13 @@
 						<div class="cardheader">
 						</div>
 						<div class="avatar">
-							<img alt="" src="<?php echo $Character['thumbnail']; ?>">
+							<img alt="" src="<?php echo $character['thumbnail']; ?>">
 						</div>
 						<div class="info">
 							<div class="title">
-								<h2><?php echo $Character['name']; ?></h2>
+								<h2><?php echo $character['name']; ?></h2>
 							</div>
-							<div class="desc"><?php echo $Character['type']; ?></div>
+							<div class="desc"><?php echo $character['type']; ?></div>
 						</div>
 						<div class="share-button"></div>
 					</div>
@@ -33,23 +33,23 @@
 								<table class="table table-responsive table-striped">
 									<tr>
 										<th><i class="fa fa-line-chart"></i> Level</th>
-										<td><?php echo $Character['level']; ?></td>
+										<td><?php echo $character['level']; ?></td>
 									</tr>
 									<tr>
 										<th><i class="fa fa-puzzle-piece"></i> Achievement Points</th>
-										<td><?php echo $Character['achiev_pts']; ?></td>
+										<td><?php echo $character['achiev_pts']; ?></td>
 									</tr>
 									<tr>
 										<th><i class="fa fa-calendar"></i> Last Seen</th>
-										<td><?php echo $this->Time->timeAgoInWords($Character['last_seen']); ?></td>
+										<td><?php echo $this->Time->timeAgoInWords($character['last_seen']); ?></td>
 									</tr>
 									<tr>
 										<th><i class="fa fa-map-marker"></i> Realm</th>
-										<td><?php echo $Character['realm']; ?></td>
+										<td><?php echo $character['realm']; ?></td>
 									</tr>
 									<tr>
 										<th><i class="fa fa-globe"></i> Battlegroup</th>
-										<td><?php echo $Character['battlegroup']; ?></td>
+										<td><?php echo $character['battlegroup']; ?></td>
 									</tr>
 								</table>
 								</div>
@@ -57,7 +57,7 @@
 							<div class="col-md-4">
 								<div class="well well-guilds">
 									<h4>Links</h4>
-									<a href="<?php echo $Character['link']; ?>" title="Carilliya on Battle.net" class="btn btn-block btn-primary">View on Battle.NET <i class="fa fa-external-link"></i></a>
+									<a href="<?php echo $character['link']; ?>" title="Carilliya on Battle.net" class="btn btn-block btn-primary">View on Battle.NET <i class="fa fa-external-link"></i></a>
 								</div>
 							</div>
 						</div><!-- /.row -->

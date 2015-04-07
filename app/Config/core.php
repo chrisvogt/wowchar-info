@@ -282,7 +282,7 @@ if (!env('APP_NAME')) {
  */
 	Cache::config('character', array(
 	    'engine' => 'File',
-	    'duration' => '+1 day',
+	    'duration' => '+1 hour',
 	    'probability' => 100,
 	    'path' => CACHE . 'characters' . DS,
 	));

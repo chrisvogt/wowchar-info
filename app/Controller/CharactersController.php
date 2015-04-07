@@ -50,13 +50,14 @@ class CharactersController extends AppController {
 
 	public $components = ['WowApiConsumer'];
 
-	public $helpers = ['Time'];
+	public $helpers = ['Time', 'CharOg'];
 
 	public function s() {
 		if (isset($this->characterName) && isset($this->realmName)) {
-			$this->set('Character', $this->WowApiConsumer->get('character', [
+			$character = $this->WowApiConsumer->get('character', [
 																		'realm' => $this->realmName,
-																		'character' => $this->characterName ]));
+																		'character' => $this->characterName ]);
+			$this->set('character', $character);
 		} else {
 			$this->Session->setFlash('Character name and realm name required for search.');
 			$this->redirect('/');
