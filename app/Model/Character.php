@@ -57,11 +57,10 @@ class Character extends AppModel {
 		return [
 			'name' 		=> 'Carilliya',
 			'type'		=> 'Human Hunter',
-			'level'		=> 90,
-			'achiev_pts' => 675,
-			'last_seen'	 => 1428300800,
-			'server'	=> 'Emerald Dream',
-			'realm'		=> 'Test Realm',
+			'level'		=> 71,
+			'achiev_pts' => 905,
+			'last_seen'	 => 1428295037000,
+			'realm'		=> 'Emerald Dream',
 			'link'		=> 'http://us.battle.net/wow/en/character/emerald-dream/Carilliya/simple'
 		];
 	}

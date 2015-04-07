@@ -37,6 +37,10 @@ class CharactersController extends AppController {
  */
 	public $name = 'Characters';
 
+	public $characterName;
+
+	public $realmName;
+
 /**
  * This controller does not use a model
  *
@@ -44,8 +48,29 @@ class CharactersController extends AppController {
  */
 	public $uses = [];
 
+	public $components = ['WowApiConsumer'];
+
+	public $helpers = ['Time'];
+
 	public function s() {
-		$this->set('Character', $this->Character->getMock());
+		if (isset($this->characterName) && isset($this->realmName)) {
+			$this->set('Character', $this->WowApiConsumer->get('character', [
+																		'realm' => $this->realmName,
+																		'character' => $this->characterName ]));
+		} else {
+			$this->Session->setFlash('Character name and realm name required for search.');
+			$this->redirect('/');
+		}
+	}
+
+	public function beforeFilter() {
+	    parent::beforeFilter();
+			if (isset($this->request->query['character'])) {
+				$this->characterName = $this->request->query['character'];
+			}
+			if (isset($this->request->query['realm'])) {
+				$this->realmName = $this->request->query['realm'];
+			}
 	}
 
 }

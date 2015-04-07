@@ -11,13 +11,13 @@
 						<div class="cardheader">
 						</div>
 						<div class="avatar">
-							<img alt="" src="http://us.battle.net/static-render/us/emerald-dream/130/90867842-avatar.jpg">
+							<img alt="" src="<?php echo $Character['thumbnail']; ?>">
 						</div>
 						<div class="info">
 							<div class="title">
-								<h2>Carilliya</h2>
+								<h2><?php echo $Character['name']; ?></h2>
 							</div>
-							<div class="desc">Human Hunter</div>
+							<div class="desc"><?php echo $Character['type']; ?></div>
 						</div>
 						<div class="share-button"></div>
 					</div>
@@ -33,23 +33,23 @@
 								<table class="table table-responsive table-striped">
 									<tr>
 										<th><i class="fa fa-line-chart"></i> Level</th>
-										<td>90</td>
+										<td><?php echo $Character['level']; ?></td>
 									</tr>
 									<tr>
 										<th><i class="fa fa-puzzle-piece"></i> Achievement Points</th>
-										<td>675</td>
+										<td><?php echo $Character['achiev_pts']; ?></td>
 									</tr>
 									<tr>
 										<th><i class="fa fa-calendar"></i> Last Seen</th>
-										<td>Yesterday</td>
-									</tr>
-									<tr>
-										<th><i class="fa fa-globe"></i> Server</th>
-										<td>Emerald Dream</td>
+										<td><?php echo $this->Time->timeAgoInWords($Character['last_seen']); ?></td>
 									</tr>
 									<tr>
 										<th><i class="fa fa-map-marker"></i> Realm</th>
-										<td>Test Realm</td>
+										<td><?php echo $Character['realm']; ?></td>
+									</tr>
+									<tr>
+										<th><i class="fa fa-globe"></i> Battlegroup</th>
+										<td><?php echo $Character['battlegroup']; ?></td>
 									</tr>
 								</table>
 								</div>
@@ -57,11 +57,11 @@
 							<div class="col-md-4">
 								<div class="well well-guilds">
 									<h4>Links</h4>
-									<a href="http://us.battle.net/wow/en/character/emerald-dream/Carilliya/simple" title="Carilliya on Battle.net" class="btn btn-block btn-primary">View on Battle.NET <i class="fa fa-external-link"></i></a>
+									<a href="<?php echo $Character['link']; ?>" title="Carilliya on Battle.net" class="btn btn-block btn-primary">View on Battle.NET <i class="fa fa-external-link"></i></a>
 								</div>
 							</div>
 						</div><!-- /.row -->
 					</div>
 				</div>
 			</div>
-			<p><img class="pull-right" src="http://cakephp.org/img/default/cake-logo-smaller2.png" />Made with  by <a href="https://twitter.com/c1v0">@c1v0</a>.</p>
+			<p><img class="pull-right" src="http://cakephp.org/img/default/cake-logo-smaller2.png" />Made with ♥ by <a href="https://twitter.com/c1v0">@c1v0</a>.</p>

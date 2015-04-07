@@ -278,6 +278,26 @@ if (!env('APP_NAME')) {
 	date_default_timezone_set('UTC');
 
 /**
+ * Define long-term storage for certain resources.
+ */
+	Cache::config('character', array(
+	    'engine' => 'File',
+	    'duration' => '+1 day',
+	    'probability' => 100,
+	    'path' => CACHE . 'characters' . DS,
+	));
+
+/**
+ * Define long-term storage for certain resources.
+ */
+	Cache::config('resource', array(
+	    'engine' => 'File',
+	    'duration' => '+1 day',
+	    'probability' => 100,
+	    'path' => CACHE . 'resources' . DS,
+	));
+
+/**
  * Configure Cache from environment variables
  */
 	Cache::config('default', CacheDsn::parse(env('CACHE_URL')));
