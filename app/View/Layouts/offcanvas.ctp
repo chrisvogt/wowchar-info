@@ -36,31 +36,42 @@
     <div class="navmenu navmenu-default navmenu-fixed-left offcanvas">
       <a class="navmenu-brand text-center" href="#"><img src="http://res.cloudinary.com/chrisvogt/image/upload/v1428239895/projects/wowchar/img/touch-icon-ipad.png" /></a>
         <div class="col-md-10 col-md-offset-1">
-          <form class="nav-search">
-            <h3>Change character</h3>
-            <fieldset>
-              <div class="input-group">
-                <span class="input-group-addon" id="basic-addon1"><i class="fa fa-globe"></i></span>
-                <input type="text" class="form-control" placeholder="Server" aria-describedby="basic-addon1">
-              </div>
-              <div class="input-group">
-                <span class="input-group-addon" id="basic-addon1"><i class="fa fa-user"></i></span>
-                <input type="text" class="form-control" placeholder="Character" aria-describedby="basic-addon1">
-              </div>
-              <a href="#" class="btn btn-block btn-success">Load character</a>
-            </fieldset>
-          </form>
-        </div>
-        <div class="col-md-10 col-md-offset-1">
-          <form style="margin-top: 48px;">
+          <?php echo $this->Form->create('Character', [
+                    'action' => 's',
+                    'type' => 'get',
+                    'class' => 'nav-search',
+                    'inputDefaults' => [
+                        'label' => false,
+                        'div' => [
+                            'class' => 'input-group'
+                        ],
+                        'class' => 'form-control'
+                    ]
+          ]); ?>
+          <h3>Change character</h3>
+          <fieldset>
             <div class="input-group">
-              <input type="text" class="form-control" value="http://wowchar.info/?server=emerald-dream&amp;character=Carilliya">
-              <span class="input-group-btn">
-                <button class="btn btn-default" type="button"><i class="fa fa-clipboard"></i></button>
-              </span>
-            </div><!-- /input-group -->
-          </form>
-        </div>
+              <span class="input-group-addon" id="txtRealm"><i class="fa fa-globe"></i></span>
+              <input type="text" name="realm" class="form-control" placeholder="Realm" aria-describedby="basic-addon1">
+            </div>
+            <div class="input-group">
+              <span class="input-group-addon" id="txtCharacter"><i class="fa fa-user"></i></span>
+              <input type="text" name="character" class="form-control" placeholder="Character" aria-describedby="basic-addon1">
+            </div>
+            <?php echo $this->Form->submit('Load character', ['class' => 'btn btn-block btn-success']); ?>
+            <?php echo $this->Form->end(); ?>
+          </fieldset>
+        </form>
+      </div>
+      <div class="col-md-10 col-md-offset-1">
+        <form style="margin-top: 48px;">
+          <div class="input-group">
+            <input type="text" class="form-control" value="<?php echo Router::reverse($this->request, true); ?>">
+            <span class="input-group-btn">
+              <button class="btn btn-default" type="button"><i class="fa fa-clipboard"></i></button>
+            </span>
+          </div><!-- /input-group -->
+      </div>
     </div>
     <div class="navbar navbar-default navbar-static-top">
       <button type="button" class="navbar-toggle" data-toggle="offcanvas" data-target=".navmenu" data-canvas="body">
