@@ -21,6 +21,12 @@ body {
   border-right: 2px solid #375a7f;
 }
 
+.nav-brand {
+  display: inline-block;
+  text-align: center;
+  width: 100%;
+}
+
 h1, h2, h3, h4, .card {
   font-family: 'Raleway', sans-serif;
   font-weight: 300;

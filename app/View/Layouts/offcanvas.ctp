@@ -18,9 +18,15 @@
 
     <meta name="description" content="View your WoW characters and generate links to share them on Facebook and other sites.">
     <meta name="author" content="http://www.chrisvogt.me">
+
+    <?php if (isset($character)) echo $this->CharOg->build($character); ?>
+
     <link rel="shortcut icon" href="favicon.png">
 
-    <?php echo $this->CharOg->build($character); ?>
+    <link rel="apple-touch-icon" href="touch-icon-iphone.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="touch-icon-ipad.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="touch-icon-iphone-retina.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="touch-icon-ipad-retina.png">
 
     <link href="//maxcdn.bootstrapcdn.com/bootswatch/3.3.4/darkly/bootstrap.min.css" rel="stylesheet">
     <link href="components/jasny-bootstrap/dist/css/jasny-bootstrap.min.css" rel="stylesheet">
@@ -36,7 +42,7 @@
   <body>
     <div class="navmenu navmenu-default navmenu-fixed-left offcanvas">
       <a class="navmenu-brand text-center" href="#">
-        <img src="http://res.cloudinary.com/chrisvogt/image/upload/v1428239895/projects/wowchar/img/touch-icon-ipad.png" />
+        <?php echo $this->Html->link($this->Html->image('http://res.cloudinary.com/chrisvogt/image/upload/v1428239895/projects/wowchar/img/touch-icon-ipad.png', ['alt' => 'WoW Character Info']), '/', ['escape' => false, 'class' => 'nav-brand']); ?>
       </a>
       <div class="col-md-10 col-md-offset-1">
         <?php

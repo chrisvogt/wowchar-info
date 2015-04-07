@@ -114,6 +114,9 @@ class WowApiConsumerComponent extends Component {
 		$this->parseSettings($settings);
 		if (!Cache::read($settings['realm'] . '-' . $settings['character'], 'character')){
 			$data = $this->makeRequest($this->buildQuery($type));
+			if (isset($data->code) && $data->code == 404) {
+				return $data;
+			}
 			if ($type === 'character') {
 				$data['class'] = $this->classes[$data['class']];
 				$data['race'] = $this->races[$data['race']];
@@ -168,6 +171,9 @@ class WowApiConsumerComponent extends Component {
 	public function makeRequest($requestUrl) {
 		$HttpSocket = new HttpSocket();
 		$results = $HttpSocket->get($requestUrl);
+		if ($results->code == 404) {
+			return $results;
+		}
 		return json_decode($results->body, true);
 	}
 

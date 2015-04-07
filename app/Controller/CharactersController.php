@@ -57,6 +57,9 @@ class CharactersController extends AppController {
 			$character = $this->WowApiConsumer->get('character', [
 																		'realm' => $this->realmName,
 																		'character' => $this->characterName ]);
+			if (isset($character->code) && $character->code == 404) {
+				throw new NotFoundException("$this->characterName on $this->realmName was not found");
+			}
 			$this->set('character', $character);
 		} else {
 			$this->Session->setFlash('Character name and realm name required for search.');
