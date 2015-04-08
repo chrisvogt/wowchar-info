@@ -91,7 +91,7 @@ class CharactersController extends AppController {
 	public function beforeFilter() {
 	    parent::beforeFilter();
 			if (isset($this->request->query['character'])) {
-				$this->characterName = $this->request->query['character'];
+				$this->characterName = Inflector::slug($this->request->query['character'], '-');
 			}
 			if (isset($this->request->query['realm'])) {
 				$this->realmName = $this->request->query['realm'];

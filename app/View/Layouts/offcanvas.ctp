@@ -131,6 +131,7 @@
       $(".chosen-select").chosen({width: "100%"});
       var client = new ZeroClipboard( document.getElementById("copy-button") );
       new Share(".share-button", {
+        url: "<?php echo urlencode(Router::reverse($this->request, true)); ?>",
         networks: {
           facebook: {
             app_id: "1593551597530332"
