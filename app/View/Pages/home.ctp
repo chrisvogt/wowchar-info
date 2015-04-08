@@ -1,4 +1,17 @@
-<h1>WoW Character Info</h1>
+<?php
+/**
+ * Home Page template
+ *     for WoW Character Info
+ *
+ * Licensed under The MIT License
+ * For full copyright and license information, please see the LICENSE.txt
+ * Redistributions of files must retain the above copyright notice.
+ *
+ * @author     		CJ Vogt (http://www.chrisvogt.me)
+ * @link          https://github.com/chrisvogt/wowchar-info WoWChar Info
+ * @package       WowCharInfo.View.Layout.offcanvas
+ * @license       http://www.opensource.org/licenses/mit-license.php MIT License
+ */ ?><h1>WoW Character Info</h1>
 
 <p class="lead">Quickly share your WoW character's stats.</p>
 

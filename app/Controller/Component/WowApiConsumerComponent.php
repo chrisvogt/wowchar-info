@@ -6,9 +6,9 @@
  * For full copyright and license information, please see the LICENSE.txt
  * Redistributions of files must retain the above copyright notice.
  *
- * @author     		CJ Vogt (http://chrisvogt.me)
- * @link          https://github.com/chrisvogt/wowchar
- * @package       WowChar.Component.WowApiConsumer
+ * @author     		CJ Vogt (http://www.chrisvogt.me)
+ * @link          https://github.com/chrisvogt/wowchar-info
+ * @package       WowCharInfo.Component.WowApiConsumer
  * @license       http://www.opensource.org/licenses/mit-license.php MIT License
  */
 
@@ -128,6 +128,13 @@ class WowApiConsumerComponent extends Component {
 		return $this->sanitize($data);
 	}
 
+/**
+ * Sanitizes the data array
+ *
+ * Cleans up the returned data to match what is expected.
+ *
+ * @return array
+ */
 	protected function sanitize($raw) {
 		$data = [
 			'name'		=> $raw['name'],
@@ -145,6 +152,14 @@ class WowApiConsumerComponent extends Component {
 		return $data;
 	}
 
+/**
+ * Loads the associated data records
+ *
+ * Loads resources to be joined with the character data, either from cache or API.
+ *
+ * @throws InvalidArgumentException
+ * @return array
+ */
 	protected function loadResource($type) {
 		if (Cache::read($type, 'resource')) {
 			return Cache::read($type, 'resource');
@@ -160,6 +175,11 @@ class WowApiConsumerComponent extends Component {
 		}
 	}
 
+/**
+ * Extracts data from resource sets returned by the Battle.NET API
+ *
+ * @return array
+ */
 	protected function extractResource($resources) {
 		$extract = [];
 		for ($i = 0; $i < count($resources); $i++) {
@@ -168,6 +188,11 @@ class WowApiConsumerComponent extends Component {
 		return $extract;
 	}
 
+/**
+ * Makes the API call
+ *
+ * @return array
+ */
 	public function makeRequest($requestUrl) {
 		$HttpSocket = new HttpSocket();
 		$results = $HttpSocket->get($requestUrl);
@@ -177,6 +202,11 @@ class WowApiConsumerComponent extends Component {
 		return json_decode($results->body, true);
 	}
 
+/**
+ * Builds the API query url based on parameters
+ *
+ * @return array
+ */
 	public function buildQuery($type) {
 		switch ($type) {
 			case 'character':
@@ -186,11 +216,17 @@ class WowApiConsumerComponent extends Component {
 		return $requestUrl;
 	}
 
+/**
+ * Helper method to get class settings
+ */
 	public function parseSettings(array $settings) {
 		$this->characterName = $settings['character'];
 		$this->realmName		 = $settings['realm'];
 	}
 
+/**
+ * Helper method to validate the type of object being requested
+ */
 	protected function isValidType($type) {
 		if (!in_array($type, $this->_validTypes)) {
 			throw new InvalidArgumentException('Invalid type passed to get(). Accepts characer or server, you passed: ' . $type);
