@@ -131,5 +131,6 @@
         }
       });
     </script>
+    <?php echo $this->element('analytics'); ?>
   </body>
 </html>
