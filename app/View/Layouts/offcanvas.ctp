@@ -14,14 +14,14 @@
    -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>WoW Character Viewer - WOWCHAR.info</title>
+    <title>WoW Character Viewer Info</title>
 
     <meta name="description" content="View your WoW characters and generate links to share them on Facebook and other sites.">
-    <meta name="author" content="http://www.chrisvogt.me">
+    <meta name="author" content="GamertagDB">
 
     <?php if (isset($character)) echo $this->CharOg->build($character); ?>
 
-    <link rel="shortcut icon" href="favicon.png">
+    <link rel="shortcut icon" href="favicon.ico">
 
     <link rel="apple-touch-icon" href="touch-icon-iphone.png">
     <link rel="apple-touch-icon" sizes="76x76" href="touch-icon-ipad.png">
