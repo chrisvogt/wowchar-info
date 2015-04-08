@@ -45,6 +45,7 @@
     <link href="components/jasny-bootstrap/dist/css/jasny-bootstrap.min.css" rel="stylesheet">
     <link href="components/font-awesome/css/font-awesome.min.css" rel="stylesheet">
     <link href='http://fonts.googleapis.com/css?family=Raleway:300' rel='stylesheet' type='text/css'>
+    <link href="components/chosen/chosen.min.css" rel="stylesheet">
     <link href="css/wowchar.css" rel="stylesheet">
 
     <!--[if lt IE 9]>
@@ -75,11 +76,15 @@
         <fieldset>
           <div class="input-group">
             <span class="input-group-addon" id="txtRealm"><i class="fa fa-globe"></i></span>
-            <input type="text" name="realm" class="form-control" placeholder="Realm" aria-describedby="basic-addon1">
+            <?php echo $this->Form->select('realm',
+                $realms,
+                array('data-placeholder' => 'Realm', 'class' => 'chosen-select', 'aria-describedby' => 'txtRealm')
+            ); ?>
+            <!-- <input type="text" name="realm" class="form-control" placeholder="Realm" aria-describedby="basic-addon1"> -->
           </div>
           <div class="input-group">
             <span class="input-group-addon" id="txtCharacter"><i class="fa fa-user"></i></span>
-            <input type="text" name="character" class="form-control" placeholder="Character" aria-describedby="basic-addon1">
+            <input type="text" name="character" class="form-control" placeholder="Character" aria-describedby="txtCharacter">
           </div>
           <?php echo $this->Form->submit('Load character', ['class' => 'btn btn-block btn-success']); ?>
           <?php echo $this->Form->end(); ?>
@@ -121,8 +126,10 @@
     <script src="components/jasny-bootstrap/js/offcanvas.js"></script>
     <script src="components/share-button/build/share.min.js"></script>
     <script src="components/zeroclipboard/dist/ZeroClipboard.min.js"></script>
+    <script src="components/chosen/chosen.jquery.min.js"></script>
     <script>
-    var client = new ZeroClipboard( document.getElementById("copy-button") );
+      $(".chosen-select").chosen({width: "100%"});
+      var client = new ZeroClipboard( document.getElementById("copy-button") );
       new Share(".share-button", {
         networks: {
           facebook: {

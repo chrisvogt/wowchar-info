@@ -53,10 +53,24 @@ class AppController extends Controller {
 		],
 		'Paginator' => ['settings' => ['paramType' => 'querystring', 'limit' => 30]]
 	];
-
+	
+/**
+ * beforeFilter() hook
+ */
 	public function beforeFilter() {
 		Parent::beforeFilter();
 		$this->layout = 'offcanvas';
+		$this->set('realms', $this->getRealms());
+	}
+
+/**
+ * Gets a list of realms from the Battle.Net API consumer component.
+ *
+ * @return array
+ */
+	public function getRealms() {
+		$WowApiConsumer = $this->Components->load('WowApiConsumer');
+		return $WowApiConsumer->getRealms();
 	}
 
 }

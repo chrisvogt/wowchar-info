@@ -48,6 +48,11 @@ class WowApiConsumerComponent extends Component {
 	public $profileBaseUrl = 'http://us.battle.net/wow/en/character/';
 
 /**
+ * Location of the realms data.
+ */
+	public $realmsUrl = 'https://raw.githubusercontent.com/chrisvogt/wow-profile-card/dev/data/realms.json?raw';
+
+/**
  * Character classes resource container.
  *
  * @var array
@@ -60,6 +65,13 @@ class WowApiConsumerComponent extends Component {
  * @var array
  */
 	public $races = [];
+
+/**
+ * Realms resource container.
+ *
+ * @var array
+ */
+	public $realms = [];
 
 /**
  * The name of the character to query.
@@ -176,6 +188,26 @@ class WowApiConsumerComponent extends Component {
 	}
 
 /**
+ * Gets the realms resource list
+ *
+ * This should be moved into loadResource().
+ *
+ * @return array
+ */
+	public function getRealms() {
+		if (Cache::read('realms', 'resource')) {
+			return Cache::read('realms', 'resource');
+		} else {
+			$res = $this->makeRequest($this->realmsUrl);
+			for ($i = 0; $i < count($res['realms']); $i++) {
+				$this->realms[$res['realms'][$i]['slug']] = $res['realms'][$i]['name'];
+			}
+			Cache::write('realms', 'resource');
+			return $this->realms;
+		}
+	}
+
+/**
  * Extracts data from resource sets returned by the Battle.NET API
  *
  * @return array
@@ -195,6 +227,7 @@ class WowApiConsumerComponent extends Component {
  */
 	public function makeRequest($requestUrl) {
 		$HttpSocket = new HttpSocket();
+		$HttpSocket->config['ssl_verify_peer'] = false;
 		$results = $HttpSocket->get($requestUrl);
 		if ($results->code == 404) {
 			return $results;

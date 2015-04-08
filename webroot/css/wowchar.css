@@ -36,6 +36,20 @@ h1, h2, h3, h4, .card {
   background: rgba(255, 255, 255, .1);
 }
 
+.chosen-container-single .chosen-single {
+  height: 43px!important;
+  border: none!important;
+  border-top-left-radius: 0!important;
+  border-bottom-left-radius: 0!important;
+}
+
+.chosen-single span {
+  padding: 10px 8px;
+  font-size: 15px;
+  line-height: 1.42857143;
+  color: #808080;
+}
+
 @media (min-width: 0) {
   .navbar-toggle {
 	display: block; /* force showing the toggle */
