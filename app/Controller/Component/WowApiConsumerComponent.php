@@ -156,9 +156,7 @@ class WowApiConsumerComponent extends Component {
 			'last_seen'	 => $raw['lastModified'] / 1000,
 			'realm'			 => $raw['realm'],
 			'battlegroup'	=> $raw['battlegroup'],
-			'link'		=> $this->profileBaseUrl
-											. Inflector::slug(strtolower($raw['realm']), '-') . DS
-											. strtolower($raw['name']) . '/simple'
+			'link'			  => $this->buildExtLink($raw['name'], $raw['realm'])
 		];
 		return $data;
 	}
@@ -246,6 +244,18 @@ class WowApiConsumerComponent extends Component {
 				break;
 		}
 		return $requestUrl;
+	}
+
+/**
+ * Builds the external profile link.
+ *
+ * @return string
+ */
+	public function buildExtLink($character, $realm) {
+		$fRealm = preg_replace('/[^A-Za-z0-9 -]/', '', $realm);
+		$link = $this->profileBaseUrl . strtolower($fRealm) . DS
+																  . strtolower($character) . DS . 'simple';
+		return $link;
 	}
 
 /**
