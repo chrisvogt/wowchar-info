@@ -20,9 +20,8 @@ App::uses('HttpSocket', 'Network/Http');
  *
  * Makes requests to the Battle.NET World of Warcraft API.
  *
- * @package       WowChar.Component.WowApiConsumer
- * @link https://github.com/chrisvogt/wowchar
- *
+ * @package      WowChar.Component.WowApiConsumer
+ * @link         https://github.com/chrisvogt/wowchar-info
  */
 class WowApiConsumerComponent extends Component {
 
@@ -259,6 +258,8 @@ class WowApiConsumerComponent extends Component {
 
 /**
  * Helper method to validate the type of object being requested
+ *
+ * @throws InvalidArgumentException When an invalid resource type is requested.
  */
 	protected function isValidType($type) {
 		if (!in_array($type, $this->_validTypes)) {

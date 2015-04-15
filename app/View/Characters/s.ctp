@@ -1,5 +1,16 @@
-
-			<div id="jumbotron" class="text-center">
+<?php
+/*
+ * Character Search View
+ *
+ * Licensed under The MIT License
+ * For full copyright and license information, please see the LICENSE.txt
+ * Redistributions of files must retain the above copyright notice.
+ *
+ * @author     		CJ Vogt (http://www.chrisvogt.me)
+ * @link          https://github.com/chrisvogt/wowchar-info WoWChar Info
+ * @package       WowCharInfo.View.Character.Search
+ * @license       http://www.opensource.org/licenses/mit-license.php MIT License
+ */ ?><div id="jumbotron" class="text-center">
 				<h1>
 				<img src="http://res.cloudinary.com/chrisvogt/image/upload/v1428239895/projects/wowchar/img/touch-icon-iphone.png" />
 				WoW Character Viewer
