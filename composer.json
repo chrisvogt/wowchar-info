@@ -1,9 +1,9 @@
 {
-  "name": "friendsofcake/app-template",
-  "description": "An empty CakePHP 2.5 application",
+  "name": "chrisvogt/wowchar-info",
+  "description": "WoW character viewer in CakePHP.",
   "type": "project",
   "keywords" : [],
-  "homepage" : "http://cakephp.org",
+  "homepage" : "http://wowchar.info",
   "license" : "MIT",
   "require" : {
     "php" : ">=5.4",
