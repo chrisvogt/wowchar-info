@@ -14,6 +14,7 @@ before_script:
   - export DATABASE_TEST_URL="mysql://travis@localhost/test_database_name?encoding=utf8"
   - cd && composer global require 'phpunit/phpunit=3.7.38' && cd -
   - ln -s ~/.composer/vendor/phpunit/phpunit/PHPUnit ./vendor/PHPUnit
+  - chmod +x app/Console/cake
 
 script:
   -  ./app/Console/cake test app AllAppTests --stderr
