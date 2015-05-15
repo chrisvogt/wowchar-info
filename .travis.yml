@@ -5,18 +5,33 @@ php:
   - 5.5
 
 env:
-  - DB=mysql
+  global:
+    - PLUGIN_NAME=Crud
+    - REQUIRE="cakephp/debug_kit:2.2.* cakedc/search:dev-develop"
+    - DB=mysql CAKE_VERSION=2.4
+
+  matrix:
+    - DB=mysql CAKE_VERSION=2.4
+    - DB=mysql CAKE_VERSION=2.5
+
+matrix:
+  include:
+    - php: 5.4
+      env:
+        - COVERALLS=1
+    - php: 5.4
+      env:
+        - PHPCS=1 PHPCS_IGNORE="*/Test/*"
 
 before_script:
-  - composer self-update
-  - composer install
-  - mysql -e 'CREATE DATABASE test_database_name;'
-  - export DATABASE_TEST_URL="mysql://travis@localhost/test_database_name?encoding=utf8"
-  - cd && composer global require 'phpunit/phpunit=3.7.38' && cd -
-  - ln -s ~/.composer/vendor/phpunit/phpunit/PHPUnit ./vendor/PHPUnit
+  - git clone https://github.com/FriendsOfCake/travis.git --depth 1 ../travis
+  - ../travis/before_script.sh
 
 script:
-  -  ./app/Console/cake test app AllAppTests --stderr
+  - ../travis/script.sh
+
+after_success:
+  - ../travis/after_success.sh
 
 notifications:
   email: false
