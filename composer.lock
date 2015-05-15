@@ -4,7 +4,7 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "5dfba28e2d23e064e961e5feb7873b36",
+    "hash": "994719b3d28f189899dc0229a31f6cec",
     "packages": [
         {
             "name": "ad7six/dsn",
@@ -97,12 +97,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/composer/installers.git",
-                "reference": "f8c20b427de1cfe7a28a015c1640ce4e4eef1e33"
+                "reference": "a66f93a541c2214b4865161426b077e2b7d951de"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/composer/installers/zipball/f8c20b427de1cfe7a28a015c1640ce4e4eef1e33",
-                "reference": "f8c20b427de1cfe7a28a015c1640ce4e4eef1e33",
+                "url": "https://api.github.com/repos/composer/installers/zipball/a66f93a541c2214b4865161426b077e2b7d951de",
+                "reference": "a66f93a541c2214b4865161426b077e2b7d951de",
                 "shasum": ""
             },
             "replace": {
@@ -184,20 +184,20 @@
                 "zend",
                 "zikula"
             ],
-            "time": "2015-03-26 16:11:30"
+            "time": "2015-04-21 19:54:55"
         },
         {
             "name": "friendsofcake/crud",
-            "version": "3.0.9",
+            "version": "3.0.x-dev",
             "source": {
                 "type": "git",
                 "url": "https://github.com/FriendsOfCake/crud.git",
-                "reference": "0be86cd5e8c5b868a61da02093c3b6af2c50b61c"
+                "reference": "c3976f1478c681b0bbc132ec3a3e82c3984eeed5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/FriendsOfCake/crud/zipball/0be86cd5e8c5b868a61da02093c3b6af2c50b61c",
-                "reference": "0be86cd5e8c5b868a61da02093c3b6af2c50b61c",
+                "url": "https://api.github.com/repos/FriendsOfCake/crud/zipball/c3976f1478c681b0bbc132ec3a3e82c3984eeed5",
+                "reference": "c3976f1478c681b0bbc132ec3a3e82c3984eeed5",
                 "shasum": ""
             },
             "require": {
@@ -250,7 +250,7 @@
                 "scaffolding",
                 "update"
             ],
-            "time": "2013-12-11 12:54:51"
+            "time": "2015-04-18 19:08:17"
         },
         {
             "name": "josegonzalez/dotenv",
@@ -307,16 +307,17 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/cakephp/debug_kit.git",
-                "reference": "a5ae1e18a0707612207da1a97161a4ea9f446ad1"
+                "reference": "225b70b9038cb2930f222bbe84c9f1a354a6baa4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/cakephp/debug_kit/zipball/a5ae1e18a0707612207da1a97161a4ea9f446ad1",
-                "reference": "a5ae1e18a0707612207da1a97161a4ea9f446ad1",
+                "url": "https://api.github.com/repos/cakephp/debug_kit/zipball/225b70b9038cb2930f222bbe84c9f1a354a6baa4",
+                "reference": "225b70b9038cb2930f222bbe84c9f1a354a6baa4",
                 "shasum": ""
             },
             "require": {
-                "cakephp/cakephp": "~3.0"
+                "composer/installers": "*",
+                "php": ">=5.3.0"
             },
             "type": "cakephp-plugin",
             "extra": {
@@ -347,7 +348,7 @@
                 "debug",
                 "kit"
             ],
-            "time": "2015-04-11 14:11:04"
+            "time": "2015-05-01 00:03:21"
         },
         {
             "name": "phpunit/php-code-coverage",
@@ -723,16 +724,15 @@
         {
             "name": "symfony/yaml",
             "version": "2.8.x-dev",
-            "target-dir": "Symfony/Component/Yaml",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/Yaml.git",
-                "reference": "fdded56dde4ca9efce6322887bf5eaa7bb0aae3e"
+                "reference": "2396832f6f9ab2b8f62f00b5d3f2e722fc773d65"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/Yaml/zipball/fdded56dde4ca9efce6322887bf5eaa7bb0aae3e",
-                "reference": "fdded56dde4ca9efce6322887bf5eaa7bb0aae3e",
+                "url": "https://api.github.com/repos/symfony/Yaml/zipball/2396832f6f9ab2b8f62f00b5d3f2e722fc773d65",
+                "reference": "2396832f6f9ab2b8f62f00b5d3f2e722fc773d65",
                 "shasum": ""
             },
             "require": {
@@ -748,7 +748,7 @@
                 }
             },
             "autoload": {
-                "psr-0": {
+                "psr-4": {
                     "Symfony\\Component\\Yaml\\": ""
                 }
             },
@@ -758,17 +758,17 @@
             ],
             "authors": [
                 {
-                    "name": "Symfony Community",
-                    "homepage": "http://symfony.com/contributors"
-                },
-                {
                     "name": "Fabien Potencier",
                     "email": "fabien@symfony.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://symfony.com/contributors"
                 }
             ],
             "description": "Symfony Yaml Component",
-            "homepage": "http://symfony.com",
-            "time": "2015-04-10 08:56:33"
+            "homepage": "https://symfony.com",
+            "time": "2015-05-12 15:16:46"
         }
     ],
     "aliases": [],
