@@ -369,3 +369,17 @@ h1, h2, h3, h4, .card {
 	display: inline-block;
 	margin: 0 auto 24px auto;
 }
+
+/* Recent Search Pane */
+#recent h3 {
+  margin: 0 0 18px;
+}
+
+#recent p {
+  margin-top: 8px;
+}
+
+#recent span {
+  display: block;
+  font-size: .875em;
+}

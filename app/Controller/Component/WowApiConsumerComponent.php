@@ -129,6 +129,8 @@ class WowApiConsumerComponent extends Component {
 				return $data;
 			}
 			if ($type === 'character') {
+				$settings['thumbnail'] = $this->thumbBaseUrl . $data['thumbnail'];
+				$this->addRecent($settings); // add to recently searched cache
 				$data['class'] = $this->classes[$data['class']];
 				$data['race'] = $this->races[$data['race']];
 			}
@@ -138,6 +140,42 @@ class WowApiConsumerComponent extends Component {
 		}
 		return $this->sanitize($data);
 	}
+
+	/**
+	 * Adds character data to the recently searched cache.
+	 *
+	 * @return mixed|boolean Whether or not the data was cached.
+	 */
+		public function addRecent($char) {
+			if (Cache::read('recent_searches', 'forever')) {
+				$recent = $this->getRecent();
+			}
+			$path = $char['realm'] . '#' . $char['character'];
+			if (isset($recent) && in_array($path, $recent)) {
+				return;
+			}
+			$recent[$path] = serialize($char);
+			return Cache::write('recent_searches', $recent, 'forever');
+		}
+
+	/**
+	 * Retrieves the latest searches from cache.
+	 *
+	 * @return array
+	 */
+		public function getRecent($qty = null) {
+			$result = Cache::read('recent_searches', 'forever');
+			if ($result) {
+				$result = array_reverse($result);
+				if (isset($qty)) {
+					$result = array_slice($result, 0, $qty);
+					array_walk($result, function(&$item, $key) {
+						$item = unserialize($item);
+					});
+				}
+			}
+			return $result;
+		}
 
 /**
  * Sanitizes the data array

@@ -298,6 +298,15 @@ if (!env('APP_NAME')) {
 	));
 
 /**
+ * Cached resources that won't expire anytime soon
+ */
+	Cache::config('forever', array(
+	    'engine' => 'File',
+	    'duration' => '+999 days',
+	    'probability' => 100
+	));
+
+/**
  * Configure Cache from environment variables
  */
 	Cache::config('default', CacheDsn::parse(env('CACHE_URL')));
