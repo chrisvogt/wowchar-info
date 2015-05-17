@@ -53,7 +53,7 @@ class AppController extends Controller {
 		],
 		'Paginator' => ['settings' => ['paramType' => 'querystring', 'limit' => 30]]
 	];
-	
+
 /**
  * beforeFilter() hook
  */
@@ -61,6 +61,7 @@ class AppController extends Controller {
 		Parent::beforeFilter();
 		$this->layout = 'offcanvas';
 		$this->set('realms', $this->getRealms());
+		$this->set('recent_searches', $this->recentSearches(6));
 	}
 
 /**
@@ -71,6 +72,11 @@ class AppController extends Controller {
 	public function getRealms() {
 		$WowApiConsumer = $this->Components->load('WowApiConsumer');
 		return $WowApiConsumer->getRealms();
+	}
+
+	public function recentSearches($qty = null) {
+		$WowApiConsumer = $this->Components->load('WowApiConsumer');
+		return $WowApiConsumer->getRecent($qty);
 	}
 
 }
