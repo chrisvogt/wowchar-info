@@ -27,6 +27,13 @@ body {
   width: 100%;
 }
 
+#ghRibbon img {
+  position: absolute;
+  top: 0;
+  right: 0;
+  border: 0;
+}
+
 h1, h2, h3, h4, .card {
   font-family: 'Raleway', sans-serif;
   font-weight: 300;
@@ -69,11 +76,11 @@ h1, h2, h3, h4, .card {
 
 @media (max-width: 992px) {
   #ghRibbon, #jumbotron {
-	display: none;
+	   display: none;
   }
 
   h1 {
-	font-size: 1.6em;
+	   font-size: 1.6em;
   }
 }
 
