@@ -1,4 +1,4 @@
-<img src="webroot/img/og-banner.jpg" alt="World of Warcraft Character Stats">
+<img src="webroot/img/wci-banner.jpg" alt="World of Warcraft Character Stats">
 
 [![GitHub release](https://img.shields.io/github/release/chrisvogt/wowchar-info.svg?style=flat-square)]()
 [![Travis](https://img.shields.io/travis/chrisvogt/wowchar-info.svg?style=flat-square)]()
