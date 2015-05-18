@@ -10,7 +10,7 @@
  * @link          https://github.com/chrisvogt/wowchar-info WoWChar Info
  * @package       WowCharInfo.View.Character.Search
  * @license       http://www.opensource.org/licenses/mit-license.php MIT License
- */ ?><div id="jumbotron" class="text-center">
+ */ ?><div id="headline" class="text-center">
 				<h1>
 				<img src="http://res.cloudinary.com/chrisvogt/image/upload/v1428239895/projects/wowchar/img/touch-icon-iphone.png" />
 				WoW Character Viewer
@@ -75,4 +75,3 @@
 					</div>
 				</div>
 			</div>
-			<p><img class="pull-right" src="http://cakephp.org/img/default/cake-logo-smaller2.png" />Made with ♥ by <a href="https://twitter.com/c1v0">@c1v0</a>.</p>

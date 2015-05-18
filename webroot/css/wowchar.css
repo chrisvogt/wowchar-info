@@ -13,6 +13,7 @@ body {
 }
 
 .navbar-static-top {
+  position: absolute;
   margin-bottom: 0;
 }
 
@@ -34,11 +35,48 @@ body {
   border: 0;
 }
 
+#jumbotron {
+  background: url(https://res.cloudinary.com/chrisvogt/image/upload/v1421541648/gamertagdb/gallery/3.jpg) no-repeat center center fixed;
+  background-size: cover;
+  text-shadow: 1px 1px 2px #181818;
+  padding: 24px;
+}
+#jumbotron .lead { font-size: 1em; }
+
+.social{
+  min-height:42px;
+  padding:8px 0;
+  margin-bottom:8px;
+  border-top:1px solid #989898;
+  border-bottom:1px solid #282828;
+  background: #45484d; /* Old browsers */
+  background: -moz-linear-gradient(top, #45484d 0%, #000000 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#45484d), color-stop(100%,#000000)); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, #45484d 0%,#000000 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, #45484d 0%,#000000 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, #45484d 0%,#000000 100%); /* IE10+ */
+  background: linear-gradient(to bottom, #45484d 0%,#000000 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#45484d', endColorstr='#000000',GradientType=0 ); /* IE6-9 */
+}
+.social .fb-like {
+  color: #cecece;
+}
+
+p.intro {
+  font-size: 1.4em;
+  font-size: 300;
+  font-family: 'Raleway', sans-serif;
+  text-align: justify;
+}
+
 h1, h2, h3, h4, .card {
   font-family: 'Raleway', sans-serif;
   font-weight: 300;
 }
 
+.quick-search .input-group {
+  margin-bottom: 8px;
+}
 .table-striped>tbody>tr:nth-of-type(odd) {
   background: rgba(255, 255, 255, .1);
 }
@@ -65,22 +103,30 @@ h1, h2, h3, h4, .card {
 
 @media (min-width: 992px) {
   body {
-	padding: 0;
+	   padding: 0;
   }
   .navbar {
-	right: auto;
-	background: none;
-	border: none;
+  	right: auto;
+  	background: none;
+  	border: none;
   }
 }
 
 @media (max-width: 992px) {
-  #ghRibbon, #jumbotron {
+  #ghRibbon, #headline {
 	   display: none;
   }
-
+  .navbar-static-top {
+    position: relative;
+  }
   h1 {
-	   font-size: 1.6em;
+    font-size: 1.6em;
+  }
+  #jumbotron h1 {
+    font-size:2.6em;
+  }
+  #jumbotron .lead {
+    font-size: .875em;
   }
 }
 

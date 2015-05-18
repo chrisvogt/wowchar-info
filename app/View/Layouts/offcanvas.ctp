@@ -55,69 +55,20 @@
     <![endif]-->
   </head>
   <body>
-    <div class="navmenu navmenu-default navmenu-fixed-left offcanvas">
-      <a class="navmenu-brand text-center" href="#">
-        <?php echo $this->Html->link($this->Html->image('http://res.cloudinary.com/chrisvogt/image/upload/v1428239895/projects/wowchar/img/touch-icon-ipad.png', ['alt' => 'WoW Character Info']), '/', ['escape' => false, 'class' => 'nav-brand']); ?>
-      </a>
-      <div class="col-md-10 col-md-offset-1">
-        <?php
-          echo $this->Form->create('Character', [
-            'action' => 's',
-            'type' => 'get',
-            'class' => 'nav-search',
-            'inputDefaults' => [
-                'label' => false,
-                'div' => [
-                    'class' => 'input-group'
-                ],
-                'class' => 'form-control'
-            ]
-          ]); ?>
-        <h3>Change character</h3>
-        <fieldset>
-          <div class="input-group">
-            <span class="input-group-addon" id="txtRealm"><i class="fa fa-globe"></i></span>
-            <?php echo $this->Form->select('realm',
-                $realms,
-                array('data-placeholder' => 'Realm', 'class' => 'chosen-select', 'aria-describedby' => 'txtRealm')
-            ); ?>
-            <!-- <input type="text" name="realm" class="form-control" placeholder="Realm" aria-describedby="basic-addon1"> -->
-          </div>
-          <div class="input-group">
-            <span class="input-group-addon" id="txtCharacter"><i class="fa fa-user"></i></span>
-            <input type="text" name="character" class="form-control" placeholder="Character" aria-describedby="txtCharacter">
-          </div>
-          <?php echo $this->Form->submit('Load character', ['class' => 'btn btn-block btn-success']); ?>
-          <?php echo $this->Form->end(); ?>
-        </fieldset>
-        </form>
-      </div>
-      <div class="col-md-10 col-md-offset-1">
-        <form style="margin-top: 48px;">
-          <div class="input-group">
-            <input type="text" id="txtLink" class="form-control" value="<?php echo Router::reverse($this->request, true); ?>">
-            <span class="input-group-btn">
-              <button class="btn btn-default" type="button" id="copy-button" data-clipboard-target="txtLink"><i class="fa fa-clipboard"></i></button>
-            </span>
-          </div><!-- /input-group -->
-      </div>
-    </div>
-    <div class="navbar navbar-default navbar-static-top">
-      <button type="button" class="navbar-toggle" data-toggle="offcanvas" data-target=".navmenu" data-canvas="body">
-      <span class="icon-bar"></span>
-      <span class="icon-bar"></span>
-      <span class="icon-bar"></span>
-      </button>
-    </div>
+    <?php if ($this->request->here !== '/') echo $this->Element('sidebar'); ?>
 
     <a href="https://github.com/chrisvogt/wowchar-info" id="ghRibbon">
       <img src="https://camo.githubusercontent.com/365986a132ccd6a44c23a9169022c0b5c890c387/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f7265645f6161303030302e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_red_aa0000.png">
     </a>
 
+		<?php if ($this->request->here == '/') echo $this->Element('jumbotron'); ?>
+
     <div class="container">
 			<?php echo $this->Session->flash(); ?>
-
 			<?php echo $this->fetch('content'); ?>
+			<footer>
+				<p><img class="pull-right" src="http://cakephp.org/img/default/cake-logo-smaller2.png" />Made with ♥ by <a href="https://twitter.com/c1v0">@c1v0</a>.</p>
+			</footer>
     </div><!-- /.container -->
 
     <!-- Bootstrap core JavaScript

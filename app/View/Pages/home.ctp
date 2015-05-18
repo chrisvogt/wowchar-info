@@ -11,11 +11,17 @@
  * @link          https://github.com/chrisvogt/wowchar-info WoWChar Info
  * @package       WowCharInfo.View.Layout.offcanvas
  * @license       http://www.opensource.org/licenses/mit-license.php MIT License
- */ ?><h1>WoW Character Info</h1>
+ */ ?>
 
-<p class="lead">Quickly share your WoW character's stats.</p>
-
-<p>This app is a toy I built to help share my WoW characters in Facebook comments. After finding your character, post the full address (found in the address bar or the sidebar menu to your left) and Facebook will generate a preview containing your character's avatar and quick stats.</p>
+<div class="row quick-search">
+	<div class="col-md-8">
+		<h3>How it works</h3>
+		<p>Find and share your World of Warcraft character statistics using this free, open-source tool that queries the World of Warcraft web API for your character information and uses that to build link previews when sharing to common social networks.
+	</div>
+	<div class="col-md-4">
+		<?php echo $this->Element('Widget/search'); ?>
+	</div>
+</div>
 
 <br>
 
