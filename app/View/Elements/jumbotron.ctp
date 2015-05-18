@@ -25,6 +25,6 @@
 </header>
 <div class="social">
 	<div class="container">
-		<div class="fb-like" data-href="http://wowchar.info" data-layout="standard" data-colorscheme="dark" data-action="like" data-show-faces="true" data-share="true"></div>
+		<div class="fb-like" data-href="http://wowchar.info" data-layout="standard" data-colorscheme="dark" data-action="like" data-show-faces="false" data-share="true"></div>
 	</div>
 </div>
