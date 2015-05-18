@@ -14,10 +14,10 @@
 								<h1 class="tagline">WoW Character Info</h1>
 								<p class="lead">Quickly share your WoW character's stats.</p>
 								<p>
-									<a href="https://github.com/chrisvogt/wowchar-info/releases" title="View releases on GitHub"><img src="https://img.shields.io/github/release/chrisvogt/wowchar-info.svg?style=flat-square"></a>
-									<a href="https://travis-ci.org/chrisvogt/wowchar-info" title="View build on TravisCI"><img src="https://img.shields.io/travis/chrisvogt/wowchar-info.svg?style=flat-square"></a>
-									<a href="https://codeclimate.com/github/chrisvogt/wowchar-info" title="View on CodeClimate"><img src="https://img.shields.io/codeclimate/github/chrisvogt/wowchar-info.svg?style=flat-square"></a>
-									<a href="https://github.com/chrisvogt/wowchar-info/blob/master/LICENSE" title="View license file"><img src="https://img.shields.io/github/license/chrisvogt/wowchar-info.svg?style=flat-square"></a>
+									<a href="https://github.com/chrisvogt/wowchar-info/releases" title="View releases on GitHub"><img src="https://img.shields.io/github/release/chrisvogt/wowchar-info.svg?style=flat-square" alt="GitHub release badge"></a>
+									<a href="https://travis-ci.org/chrisvogt/wowchar-info" title="View build on TravisCI"><img src="https://img.shields.io/travis/chrisvogt/wowchar-info.svg?style=flat-square" alt="TravisCI build status badge"></a>
+									<a href="https://codeclimate.com/github/chrisvogt/wowchar-info" title="View on CodeClimate"><img src="https://img.shields.io/codeclimate/github/chrisvogt/wowchar-info.svg?style=flat-square" alt="CodeClimate badge"></a>
+									<a href="https://github.com/chrisvogt/wowchar-info/blob/master/LICENSE" title="View license file"><img src="https://img.shields.io/github/license/chrisvogt/wowchar-info.svg?style=flat-square" alt="License badge"></a>
 								</p>
 						</div>
 				</div>
