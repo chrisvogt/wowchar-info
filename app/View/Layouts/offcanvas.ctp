@@ -30,13 +30,16 @@
 
     <title>WoW Character Viewer Info</title>
 
-    <meta name="description" content="View your WoW characters and generate links to share them on Facebook and other sites.">
-    <meta name="author" content="GamertagDB">
-
-    <?php if (isset($character)) echo $this->CharOg->build($character); ?>
+    <meta name="description" content="Find and share your World of Warcraft character stats with this free, open-source tool.">
+    <meta name="author" content="CHR1SV0GT">
+    <?php
+    if (isset($character)) :
+			echo $this->CharOg->build($character);
+		else:
+      echo $this->Html->meta(['name' => 'og:image', 'contents' => $this->Html->Url('/img/og-banner.jpg', true)]);
+		endif; ?>
 
     <link rel="shortcut icon" href="favicon.ico">
-
     <link rel="apple-touch-icon" href="touch-icon-iphone.png">
     <link rel="apple-touch-icon" sizes="76x76" href="touch-icon-ipad.png">
     <link rel="apple-touch-icon" sizes="120x120" href="touch-icon-iphone-retina.png">
