@@ -10,7 +10,7 @@
 		<div class="container">
 				<div class="row">
 						<div class="col-lg-12 text-center">
-								<?php echo $this->Html->image('../touch-icon-iphone-retina.png'); ?>
+								<?php echo $this->Html->image('../touch-icon-iphone-retina.png', ['class' => 'logo']); ?>
 								<h1 class="tagline">WoW Character Info</h1>
 								<p class="lead">Quickly share your WoW character's stats.</p>
 								<p>
