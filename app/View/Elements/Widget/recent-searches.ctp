@@ -11,7 +11,7 @@
 					]],
 					['escape' => false]
 			); ?>
-			<p><?php echo $item['character']; ?><span><?php echo $item['realm']; ?></span></p>
+			<p><?php echo $item['character']; ?><span><?php echo $realms[$item['realm']]; ?></span></p>
 		</div>
 		<?php endforeach; ?>
 	</div>
