@@ -1,5 +1,6 @@
-<div id="recent" class="well">
-	<h3>Recent Searches</h3>
+<div id="recent" class="card">
+	<div class="container">
+	<h3><i class="fa fa-history"></i> Recent Searches</h3>
 	<div class="row">
 		<?php foreach ($recent_searches as $item) : ?>
 		<div class="col-xs-4 col-md-2 text-center">
@@ -14,5 +15,6 @@
 			<p><?php echo $item['character']; ?><span><?php echo $realms[$item['realm']]; ?></span></p>
 		</div>
 		<?php endforeach; ?>
+	</div>
 	</div>
 </div>

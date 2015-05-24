@@ -15,7 +15,7 @@
 
 <div class="row quick-search">
 	<div class="col-md-8">
-		<h3>How it works</h3>
+		<h3><i class="fa fa-street-view"></i> How it works</h3>
 		<p>Find and share your World of Warcraft character statistics using this free, open-source tool that queries the World of Warcraft web API for your character information and uses that to build link previews when sharing to common social networks.
 	</div>
 	<div class="col-md-4">

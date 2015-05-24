@@ -40,10 +40,10 @@
 						<div class="row">
 							<div class="col-md-8">
 								<div class="well well-quick-stats well-trans">
-								<h4>Quick Stats</h4>
+								<h4><i class="fa fa-line-chart"></i> Quick Stats</h4>
 								<table class="table table-responsive table-striped">
 									<tr>
-										<th><i class="fa fa-line-chart"></i> Level</th>
+										<th><i class="fa fa-star-o"></i> Level</th>
 										<td><?php echo $character['level']; ?></td>
 									</tr>
 									<tr>
@@ -67,7 +67,7 @@
 							</div>
 							<div class="col-md-4">
 								<div class="well well-guilds">
-									<h4>Links</h4>
+									<h3><i class="fa fa-globe"></i> Links</h3>
 									<a href="<?php echo $character['link']; ?>" title="Carilliya on Battle.net" class="btn btn-block btn-primary">View on Battle.NET <i class="fa fa-external-link"></i></a>
 								</div>
 							</div>

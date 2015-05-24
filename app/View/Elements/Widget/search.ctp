@@ -11,7 +11,7 @@
 				'class' => 'form-control'
 		]
 	]); ?>
-<h3>Character search</h3>
+<h3><i class="fa fa-search"></i> Character search</h3>
 <fieldset>
 	<div class="input-group">
 		<span class="input-group-addon" id="txtQuickRealm"><i class="fa fa-globe"></i></span>
