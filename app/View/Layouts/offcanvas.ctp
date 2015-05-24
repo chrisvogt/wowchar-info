@@ -30,8 +30,9 @@
 
     <title>WoW Character Viewer Info</title>
 
-    <meta name="description" content="Find and share your World of Warcraft character stats online with this free, open-source tool.">
-    <meta name="author" content="CJ Vogt">
+	<?php echo $this->Html->meta(['name' => 'description', 'content' => 'Find and share your World of Warcraft character stats online with this free, open-source tool.']); ?>
+	<?php echo $this->Html->meta(['name' => 'author', 'content' => '@C1V0']); ?>
+	<?php echo $this->Html->meta(['name' => 'robots', 'content' => 'index, follow']); ?>
     <?php
     if (isset($character)) :
 		echo $this->CharOg->build($character);
