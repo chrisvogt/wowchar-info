@@ -1,3 +1,12 @@
+/*                                               /$$
+                                                | $$
+ /$$  /$$  /$$  /$$$$$$  /$$  /$$  /$$  /$$$$$$$| $$$$$$$   /$$$$$$   /$$$$$$
+| $$ | $$ | $$ /$$__  $$| $$ | $$ | $$ /$$_____/| $$__  $$ |____  $$ /$$__  $$
+| $$ | $$ | $$| $$  \ $$| $$ | $$ | $$| $$      | $$  \ $$  /$$$$$$$| $$  \__/
+| $$ | $$ | $$| $$  | $$| $$ | $$ | $$| $$      | $$  | $$ /$$__  $$| $$
+|  $$$$$/$$$$/|  $$$$$$/|  $$$$$/$$$$/|  $$$$$$$| $$  | $$|  $$$$$$$| $$
+ \_____/\___/  \______/  \_____/\___/  \_______/|__/  |__/ \_______/|__/
+                                       by chrisvogt.me | @c1v0  */
 html, body {
 	height: 100%;
 }
@@ -382,7 +391,6 @@ h1, h2, h3, h4, .card {
 .card.hovercard {
 	position: relative;
 	padding-top: 0;
-	overflow: hidden;
 	text-align: center;
 	background-color: rgba(0, 0, 0, 0.6);
 	border-bottom: 1px solid #495535;
@@ -448,6 +456,17 @@ h1, h2, h3, h4, .card {
 	line-height: 18px;
 }
 
+.btn-primary {
+	background-color: #387E60;
+  -moz-transition: all .2s ease-in;
+  -o-transition: all .2s ease-in;
+  -webkit-transition: all .2s ease-in;
+  transition: all .2s ease-in;
+}
+.btn-primary:hover {
+	background-color: #579568;
+}
+
 .well-guilds {
 	background: rgba(20, 20, 20, .3);
 }
@@ -492,6 +511,10 @@ h1, h2, h3, h4, .card {
 	margin: 0 auto;
 	display: inline-block;
 	margin: 0 auto 24px auto;
+}
+
+.social.active {
+	z-index: 24;
 }
 
 /* Recent Search Pane */
