@@ -91,16 +91,18 @@
     <script src="components/zeroclipboard/dist/ZeroClipboard.min.js"></script>
     <script src="components/chosen/chosen.jquery.min.js"></script>
     <script>
-			$('#shareme').sharrre({
-			  share: {
-			    twitter: true,
-			    facebook: true,
-			    googlePlus: false
-			  },
-			  template: '<div class="box"><div class="left">Share</div><div class="middle"><a href="#" class="facebook">f</a><a href="#" class="twitter">t</a></div><div class="right">{total}</div></div>',
-			  enableHover: false,
-			  enableTracking: true,
-			  render: function(api, options){
+	    $(".chosen-select").chosen({width: "100%"});
+	    var client = new ZeroClipboard( document.getElementById("copy-button") );
+		$('#shareme').sharrre({
+		  share: {
+		    twitter: true,
+		    facebook: true,
+		    googlePlus: false
+		  },
+		  template: '<div class="box"><div class="left">Share</div><div class="middle"><a href="#" class="facebook">f</a><a href="#" class="twitter">t</a></div><div class="right">{total}</div></div>',
+		  enableHover: false,
+		  enableTracking: true,
+		  render: function(api, options){
 			  $(api.element).on('click', '.twitter', function() {
 			    api.openPopup('twitter');
 			  });
@@ -108,7 +110,7 @@
 			    api.openPopup('facebook');
 			  });
 			}
-			});
+		});
     </script>
     <?php echo $this->element('analytics'); ?>
   </body>
