@@ -29,26 +29,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>
-    	<?php echo ($character) ? 'Overview of ' . $character['name'] . ' on ' . $character['realm'] : 'WoW Character Viewer Info'; ?>
+    	<?php echo (isset($character)) ? 'Overview of ' . $character['name'] . ' on ' . $character['realm'] : 'WoW Character Viewer Info'; ?>
   	</title>
 
 	<?php echo $this->Html->meta(['name' => 'description', 'content' => 'Find and share your World of Warcraft character stats online with this free, open-source tool.']); ?>
 	<?php echo $this->Html->meta(['name' => 'author', 'content' => '@C1V0']); ?>
 	<?php echo $this->Html->meta(['name' => 'robots', 'content' => 'index, follow']); ?>
-    <?php
+  <?php
     if (isset($character)) :
-		echo $this->CharOg->build($character);
-	else:
-		echo $this->Html->meta(['property' => 'og:image', 'content' => $this->Html->Url('/img/og-banner.jpg', true)]);
-		echo $this->Html->meta(['property' => 'og:description', 'content' => 'Find and share your World of Warcraft character stats online with this free, open-source tool.']);
-		echo $this->Html->meta(['property' => 'og:author', 'content' => 'CHR1SV0GT']);
-		echo $this->Html->meta(['name' => 'twitter:card', 'content' => 'summary_large_image']);
-		echo $this->Html->meta(['name' => 'twitter:site', 'content' => 'http://wowchar.info']);
-		echo $this->Html->meta(['name' => 'twitter:creator', 'content' => '@C1V0']);
-		echo $this->Html->meta(['name' => 'twitter:title', 'content' => 'World of Warcraft character sharing tool']);
-		echo $this->Html->meta(['name' => 'twitter:description', 'content' => 'Find and share your World of Warcraft character stats online with this free, open-source tool.']);
-		echo $this->Html->meta(['name' => 'twitter:image', 'content' => $this->Html->Url('/img/og-banner.jpg', true)]);
-	endif; ?>
+			echo $this->CharOg->build($character);
+		else:
+			echo $this->Html->meta(['property' => 'og:image', 'content' => $this->Html->Url('/img/og-banner.jpg', true)]);
+			echo $this->Html->meta(['property' => 'og:description', 'content' => 'Find and share your World of Warcraft character stats online with this free, open-source tool.']);
+			echo $this->Html->meta(['property' => 'og:author', 'content' => 'CHR1SV0GT']);
+			echo $this->Html->meta(['name' => 'twitter:card', 'content' => 'summary_large_image']);
+			echo $this->Html->meta(['name' => 'twitter:site', 'content' => 'http://wowchar.info']);
+			echo $this->Html->meta(['name' => 'twitter:creator', 'content' => '@C1V0']);
+			echo $this->Html->meta(['name' => 'twitter:title', 'content' => 'World of Warcraft character sharing tool']);
+			echo $this->Html->meta(['name' => 'twitter:description', 'content' => 'Find and share your World of Warcraft character stats online with this free, open-source tool.']);
+			echo $this->Html->meta(['name' => 'twitter:image', 'content' => $this->Html->Url('/img/og-banner.jpg', true)]);
+		endif; ?>
 
     <link rel="shortcut icon" href="favicon.ico">
     <link rel="apple-touch-icon" href="touch-icon-iphone.png">
@@ -101,6 +101,7 @@
     <script src="components/chosen/chosen.jquery.min.js"></script>
     <script>
 	    $(".chosen-select").chosen({width: "100%"});
+	    <?php if ($this->request->here !== '/') : ?>
 	    var client = new ZeroClipboard( document.getElementById("copy-button") );
 			$('#shareme').sharrre({
 			  share: {
@@ -120,6 +121,8 @@
 				  });
 				}
 			});
+			<?php endif; ?>
+
     </script>
     <?php echo $this->element('analytics'); ?>
   </body>
