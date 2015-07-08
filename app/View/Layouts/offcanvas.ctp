@@ -87,27 +87,28 @@
     <script src="//netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
     <script src="components/jasny-bootstrap/dist/js/jasny-bootstrap.min.js"></script>
     <script src="components/jasny-bootstrap/js/offcanvas.js"></script>
-    <script src="components/share-button/build/share.min.js"></script>
+    <script src="components/sharrre/jquery.sharrre.min.js"></script>
     <script src="components/zeroclipboard/dist/ZeroClipboard.min.js"></script>
     <script src="components/chosen/chosen.jquery.min.js"></script>
     <script>
-      $(".chosen-select").chosen({width: "100%"});
-      var client = new ZeroClipboard( document.getElementById("copy-button") );
-      new Share(".share-button", {
-        url: "<?php echo Router::reverse($this->request, true); ?>",
-        title: "<?php echo ($character) ? $character['name'] . ' on ' . $character['realm'] : 'WoW Character Sharing App'; ?>",
-        description: "<?php echo ($character) ? 'Overview: ' . $character['name'] . ' is a level ' . $character['level'] . ' ' . $character['type'] . ' on ' . $character['realm'] : 'WoW Character Sharing App'; ?>",
-        image: "<?php echo ($character) ? $character['thumbnail'] : ''; ?>",
-        networks: {
-          facebook: {
-            app_id: "1593551597530332"
-          }
-        },
-        ui: {
-        	flyout: "bottom center",
-        	button_font: "Raleway"
-        }
-      });
+			$('#shareme').sharrre({
+			  share: {
+			    twitter: true,
+			    facebook: true,
+			    googlePlus: false
+			  },
+			  template: '<div class="box"><div class="left">Share</div><div class="middle"><a href="#" class="facebook">f</a><a href="#" class="twitter">t</a></div><div class="right">{total}</div></div>',
+			  enableHover: false,
+			  enableTracking: true,
+			  render: function(api, options){
+			  $(api.element).on('click', '.twitter', function() {
+			    api.openPopup('twitter');
+			  });
+			  $(api.element).on('click', '.facebook', function() {
+			    api.openPopup('facebook');
+			  });
+			}
+			});
     </script>
     <?php echo $this->element('analytics'); ?>
   </body>

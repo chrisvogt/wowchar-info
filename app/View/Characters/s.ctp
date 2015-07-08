@@ -12,8 +12,8 @@
  * @license       http://www.opensource.org/licenses/mit-license.php MIT License
  */ ?><div id="headline" class="text-center">
 				<h1>
-				<img src="http://res.cloudinary.com/chrisvogt/image/upload/v1428239895/projects/wowchar/img/touch-icon-iphone.png" />
-				WoW Character Viewer
+					<img src="http://res.cloudinary.com/chrisvogt/image/upload/v1428239895/projects/wowchar/img/touch-icon-iphone.png" />
+					WoW Character Viewer
 				</h1>
 			</div>
 			<div class="row">
@@ -28,9 +28,9 @@
 							<div class="title">
 								<h2><?php echo $character['name']; ?></h2>
 							</div>
-							<div class="desc"><?php echo $character['type']; ?></div>
+							<div class="desc"><?php echo $character['type'] . ' on ' . $character['realm']; ?></div>
+							<div id="shareme" data-url="<?php echo htmlspecialchars(Router::reverse($this->request, true)); ?>" data-text="<?php echo 'Overview: ' . $character['name'] . ' is a level ' . $character['level'] . ' ' . $character['type'] . ' on ' . $character['realm']; ?>"></div>
 						</div>
-						<div class="share-button"></div>
 					</div>
 				</div>
 			</div>
