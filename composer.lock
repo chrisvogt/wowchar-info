@@ -97,12 +97,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/composer/installers.git",
-                "reference": "a66f93a541c2214b4865161426b077e2b7d951de"
+                "reference": "e420b539e8d7b38b7c6f3f99dccc0386bd3dfe41"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/composer/installers/zipball/a66f93a541c2214b4865161426b077e2b7d951de",
-                "reference": "a66f93a541c2214b4865161426b077e2b7d951de",
+                "url": "https://api.github.com/repos/composer/installers/zipball/e420b539e8d7b38b7c6f3f99dccc0386bd3dfe41",
+                "reference": "e420b539e8d7b38b7c6f3f99dccc0386bd3dfe41",
                 "shasum": ""
             },
             "replace": {
@@ -184,7 +184,7 @@
                 "zend",
                 "zikula"
             ],
-            "time": "2015-04-21 19:54:55"
+            "time": "2015-06-13 15:30:38"
         },
         {
             "name": "friendsofcake/crud",
@@ -192,12 +192,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/FriendsOfCake/crud.git",
-                "reference": "c3976f1478c681b0bbc132ec3a3e82c3984eeed5"
+                "reference": "e22c1563a51d86aac0d5054beee28b4afb60c802"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/FriendsOfCake/crud/zipball/c3976f1478c681b0bbc132ec3a3e82c3984eeed5",
-                "reference": "c3976f1478c681b0bbc132ec3a3e82c3984eeed5",
+                "url": "https://api.github.com/repos/FriendsOfCake/crud/zipball/e22c1563a51d86aac0d5054beee28b4afb60c802",
+                "reference": "e22c1563a51d86aac0d5054beee28b4afb60c802",
                 "shasum": ""
             },
             "require": {
@@ -250,7 +250,7 @@
                 "scaffolding",
                 "update"
             ],
-            "time": "2015-04-18 19:08:17"
+            "time": "2015-06-04 01:53:58"
         },
         {
             "name": "josegonzalez/dotenv",
@@ -307,12 +307,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/cakephp/debug_kit.git",
-                "reference": "225b70b9038cb2930f222bbe84c9f1a354a6baa4"
+                "reference": "43ed7d47167f38f87b3f3a7acfea35ac7241d342"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/cakephp/debug_kit/zipball/225b70b9038cb2930f222bbe84c9f1a354a6baa4",
-                "reference": "225b70b9038cb2930f222bbe84c9f1a354a6baa4",
+                "url": "https://api.github.com/repos/cakephp/debug_kit/zipball/43ed7d47167f38f87b3f3a7acfea35ac7241d342",
+                "reference": "43ed7d47167f38f87b3f3a7acfea35ac7241d342",
                 "shasum": ""
             },
             "require": {
@@ -348,7 +348,7 @@
                 "debug",
                 "kit"
             ],
-            "time": "2015-05-01 00:03:21"
+            "time": "2015-05-30 13:10:48"
         },
         {
             "name": "phpunit/php-code-coverage",
@@ -417,12 +417,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/php-file-iterator.git",
-                "reference": "a923bb15680d0089e2316f7a4af8f437046e96bb"
+                "reference": "6150bf2c35d3fc379e50c7602b75caceaa39dbf0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/php-file-iterator/zipball/a923bb15680d0089e2316f7a4af8f437046e96bb",
-                "reference": "a923bb15680d0089e2316f7a4af8f437046e96bb",
+                "url": "https://api.github.com/repos/sebastianbergmann/php-file-iterator/zipball/6150bf2c35d3fc379e50c7602b75caceaa39dbf0",
+                "reference": "6150bf2c35d3fc379e50c7602b75caceaa39dbf0",
                 "shasum": ""
             },
             "require": {
@@ -456,7 +456,7 @@
                 "filesystem",
                 "iterator"
             ],
-            "time": "2015-04-02 05:19:05"
+            "time": "2015-06-21 13:08:43"
         },
         {
             "name": "phpunit/php-text-template",
@@ -464,12 +464,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/php-text-template.git",
-                "reference": "da723fbc17274ab7093c184056a3ea836839cbb0"
+                "reference": "f87a4b06e9124e7ad58572ff5f481d79423d51e0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/php-text-template/zipball/da723fbc17274ab7093c184056a3ea836839cbb0",
-                "reference": "da723fbc17274ab7093c184056a3ea836839cbb0",
+                "url": "https://api.github.com/repos/sebastianbergmann/php-text-template/zipball/f87a4b06e9124e7ad58572ff5f481d79423d51e0",
+                "reference": "f87a4b06e9124e7ad58572ff5f481d79423d51e0",
                 "shasum": ""
             },
             "require": {
@@ -478,7 +478,7 @@
             "type": "library",
             "autoload": {
                 "classmap": [
-                    "Text/"
+                    "src/"
                 ]
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -488,7 +488,7 @@
             "authors": [
                 {
                     "name": "Sebastian Bergmann",
-                    "email": "sb@sebastian-bergmann.de",
+                    "email": "sebastian@phpunit.de",
                     "role": "lead"
                 }
             ],
@@ -497,7 +497,7 @@
             "keywords": [
                 "template"
             ],
-            "time": "2015-01-01 09:26:19"
+            "time": "2015-06-21 13:52:25"
         },
         {
             "name": "phpunit/php-timer",
@@ -505,12 +505,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/php-timer.git",
-                "reference": "744ca6708bda5b0e1cd311d308a3410e480dc283"
+                "reference": "3e82f4e9fc92665fafd9157568e4dcb01d014e5b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/php-timer/zipball/744ca6708bda5b0e1cd311d308a3410e480dc283",
-                "reference": "744ca6708bda5b0e1cd311d308a3410e480dc283",
+                "url": "https://api.github.com/repos/sebastianbergmann/php-timer/zipball/3e82f4e9fc92665fafd9157568e4dcb01d014e5b",
+                "reference": "3e82f4e9fc92665fafd9157568e4dcb01d014e5b",
                 "shasum": ""
             },
             "require": {
@@ -519,7 +519,7 @@
             "type": "library",
             "autoload": {
                 "classmap": [
-                    "PHP/"
+                    "src/"
                 ]
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -538,7 +538,7 @@
             "keywords": [
                 "timer"
             ],
-            "time": "2015-01-01 09:24:53"
+            "time": "2015-06-21 08:01:12"
         },
         {
             "name": "phpunit/php-token-stream",
@@ -727,12 +727,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/Yaml.git",
-                "reference": "2396832f6f9ab2b8f62f00b5d3f2e722fc773d65"
+                "reference": "000e7fc2653335cd42c6d21405dac1c74224a387"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/Yaml/zipball/2396832f6f9ab2b8f62f00b5d3f2e722fc773d65",
-                "reference": "2396832f6f9ab2b8f62f00b5d3f2e722fc773d65",
+                "url": "https://api.github.com/repos/symfony/Yaml/zipball/000e7fc2653335cd42c6d21405dac1c74224a387",
+                "reference": "000e7fc2653335cd42c6d21405dac1c74224a387",
                 "shasum": ""
             },
             "require": {
@@ -768,7 +768,7 @@
             ],
             "description": "Symfony Yaml Component",
             "homepage": "https://symfony.com",
-            "time": "2015-05-12 15:16:46"
+            "time": "2015-07-01 14:16:54"
         }
     ],
     "aliases": [],

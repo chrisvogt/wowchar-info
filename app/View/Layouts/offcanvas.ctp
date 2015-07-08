@@ -28,7 +28,9 @@
    -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>WoW Character Viewer Info</title>
+    <title>
+    	<?php echo ($character) ? 'Overview of ' . $character['name'] . ' on ' . $character['realm'] : 'WoW Character Viewer Info'; ?>
+  	</title>
 
 	<?php echo $this->Html->meta(['name' => 'description', 'content' => 'Find and share your World of Warcraft character stats online with this free, open-source tool.']); ?>
 	<?php echo $this->Html->meta(['name' => 'author', 'content' => '@C1V0']); ?>
@@ -57,7 +59,7 @@
     <link href="//maxcdn.bootstrapcdn.com/bootswatch/3.3.4/darkly/bootstrap.min.css" rel="stylesheet">
     <link href="components/jasny-bootstrap/dist/css/jasny-bootstrap.min.css" rel="stylesheet">
     <link href="components/font-awesome/css/font-awesome.min.css" rel="stylesheet">
-    <link href='http://fonts.googleapis.com/css?family=Raleway:300' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Raleway:300' rel='stylesheet' type='text/css'>
     <link href="components/chosen/chosen.min.css" rel="stylesheet">
     <link href="css/wowchar.css" rel="stylesheet">
 
@@ -77,13 +79,10 @@
 			<?php echo $this->Session->flash(); ?>
 			<?php echo $this->fetch('content'); ?>
 			<footer>
-				<p><img class="pull-right" src="http://cakephp.org/img/default/cake-logo-smaller2.png" />Made with ♥ by <a href="https://twitter.com/c1v0">@c1v0</a>.</p>
+				<p><img class="pull-right" src="http://cakephp.org/img/default/cake-logo-smaller2.png" /> <i class="fa fa-code"></i> with <i class="fa fa-heart"></i> by <a href="https://twitter.com/c1v0">@c1v0</a>.</p>
 			</footer>
-    </div><!-- /.container -->
+    </div>
 
-    <!-- Bootstrap core JavaScript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
     <script src="components/jquery/dist/jquery.min.js"></script>
     <script src="//netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
     <script src="components/jasny-bootstrap/dist/js/jasny-bootstrap.min.js"></script>
@@ -95,11 +94,18 @@
       $(".chosen-select").chosen({width: "100%"});
       var client = new ZeroClipboard( document.getElementById("copy-button") );
       new Share(".share-button", {
-        url: "<?php echo urlencode(Router::reverse($this->request, true)); ?>",
+        url: "<?php echo Router::reverse($this->request, true); ?>",
+        title: "<?php echo ($character) ? $character['name'] . ' on ' . $character['realm'] : 'WoW Character Sharing App'; ?>",
+        description: "<?php echo ($character) ? 'Overview: ' . $character['name'] . ' is a level ' . $character['level'] . ' ' . $character['type'] . ' on ' . $character['realm'] : 'WoW Character Sharing App'; ?>",
+        image: "<?php echo ($character) ? $character['thumbnail'] : ''; ?>",
         networks: {
           facebook: {
             app_id: "1593551597530332"
           }
+        },
+        ui: {
+        	flyout: "bottom center",
+        	button_font: "Raleway"
         }
       });
     </script>

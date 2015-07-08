@@ -40,7 +40,7 @@
 						<div class="row">
 							<div class="col-md-8">
 								<div class="well well-quick-stats well-trans">
-								<h4><i class="fa fa-line-chart"></i> Quick Stats</h4>
+								<h3><i class="fa fa-line-chart"></i> Quick Stats</h3>
 								<table class="table table-responsive table-striped">
 									<tr>
 										<th><i class="fa fa-star-o"></i> Level</th>
