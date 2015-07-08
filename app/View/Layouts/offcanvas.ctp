@@ -56,22 +56,31 @@
     <link rel="apple-touch-icon" sizes="120x120" href="touch-icon-iphone-retina.png">
     <link rel="apple-touch-icon" sizes="152x152" href="touch-icon-ipad-retina.png">
 
-    <link href="//maxcdn.bootstrapcdn.com/bootswatch/3.3.4/darkly/bootstrap.min.css" rel="stylesheet">
-    <link href="components/jasny-bootstrap/dist/css/jasny-bootstrap.min.css" rel="stylesheet">
-    <link href="components/font-awesome/css/font-awesome.min.css" rel="stylesheet">
-    <link href='https://fonts.googleapis.com/css?family=Raleway:300' rel='stylesheet' type='text/css'>
-    <link href="components/chosen/chosen.min.css" rel="stylesheet">
-    <link href="css/wowchar.css" rel="stylesheet">
+		<?php echo $this->Html->css([
+			'https://maxcdn.bootstrapcdn.com/bootswatch/3.3.4/darkly/bootstrap.min.css',
+			'/components/jasny-bootstrap/dist/css/jasny-bootstrap.min.css',
+			'https://fonts.googleapis.com/css?family=Raleway:300',
+			'wowchar',
+			'/components/chosen/chosen.min.css',
+			'/components/font-awesome/css/font-awesome.min.css',
+			'/components/github-fork-ribbon-css/gh-fork-ribbon.css'
+		]); ?>
 
     <!--[if lt IE 9]>
-    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <?php echo $this->Html->css([
+    	'https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js',
+    	'https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js',
+			'/components/github-fork-ribbon-css/gh-fork-ribbon.ie.css'
+    ]); ?>
     <![endif]-->
   </head>
   <body>
     <?php if ($this->request->here !== '/') echo $this->Element('sidebar'); ?>
-
-	<a href="https://github.com/chrisvogt/wowchar-info" id="ghRibbon"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://camo.githubusercontent.com/38ef81f8aca64bb9a64448d0d70f1308ef5341ab/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f6461726b626c75655f3132313632312e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png"></a>
+    <div id="ghRibbon" class="github-fork-ribbon-wrapper right">
+      <div class="github-fork-ribbon hvr-back-pulse">
+          <a href="https://github.com/chrisvogt/wowchar-info">Fork me on GitHub</a>
+      </div>
+    </div>
 
 		<?php if ($this->request->here == '/') echo $this->Element('jumbotron'); ?>
 
@@ -93,24 +102,24 @@
     <script>
 	    $(".chosen-select").chosen({width: "100%"});
 	    var client = new ZeroClipboard( document.getElementById("copy-button") );
-		$('#shareme').sharrre({
-		  share: {
-		    twitter: true,
-		    facebook: true,
-		    googlePlus: false
-		  },
-		  template: '<div class="box"><div class="left">Share</div><div class="middle"><a href="#" class="facebook">f</a><a href="#" class="twitter">t</a></div><div class="right">{total}</div></div>',
-		  enableHover: false,
-		  enableTracking: true,
-		  render: function(api, options){
-			  $(api.element).on('click', '.twitter', function() {
-			    api.openPopup('twitter');
-			  });
-			  $(api.element).on('click', '.facebook', function() {
-			    api.openPopup('facebook');
-			  });
-			}
-		});
+			$('#shareme').sharrre({
+			  share: {
+			    twitter: true,
+			    facebook: true,
+			    googlePlus: false
+			  },
+			  template: '<div class="box"><div class="left">Share</div><div class="middle"><a href="#" class="facebook">f</a><a href="#" class="twitter">t</a></div><div class="right">{total}</div></div>',
+			  enableHover: false,
+			  enableTracking: true,
+			  render: function(api, options){
+				  $(api.element).on('click', '.twitter', function() {
+				    api.openPopup('twitter');
+				  });
+				  $(api.element).on('click', '.facebook', function() {
+				    api.openPopup('facebook');
+				  });
+				}
+			});
     </script>
     <?php echo $this->element('analytics'); ?>
   </body>

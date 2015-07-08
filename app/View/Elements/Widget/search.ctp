@@ -24,7 +24,7 @@
 		<span class="input-group-addon" id="txtQuickCharacter"><i class="fa fa-user"></i></span>
 		<input type="text" name="character" class="form-control" placeholder="Character" aria-describedby="txtQuickCharacter">
 	</div>
-	<?php echo $this->Form->submit('Load character', ['class' => 'btn btn-block btn-success']); ?>
+	<?php echo $this->Form->submit('Load character', ['class' => 'btn btn-block btn-primary']); ?>
 	<?php echo $this->Form->end(); ?>
 </fieldset>
 </form>

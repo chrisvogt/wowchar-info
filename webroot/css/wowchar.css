@@ -51,14 +51,6 @@ h3 .fa {
 	width: 100%;
 }
 
-#ghRibbon img {
-	position: absolute;
-	top: 0;
-	right: 0;
-	border: 0;
-	z-index: 9;
-}
-
 #jumbotron {
 	background: url("../img/banner-bg.jpg") no-repeat top center;
 	text-shadow: 1px 1px 2px #181818;
@@ -166,7 +158,6 @@ h1, h2, h3, h4, .card {
 		background: none;
 		border: none;
 	}
-
 	#jumbotron img.logo {
 		width: auto;
 		height: auto;
@@ -189,15 +180,6 @@ h1, h2, h3, h4, .card {
 
 	#jumbotron .lead {
 		font-size: .875em;
-	}
-}
-
-/**
- * Small devices
- */
-@media (max-width: 749px) {
-	#ghRibbon, #headline {
-		display: none;
 	}
 }
 
@@ -455,15 +437,18 @@ h1, h2, h3, h4, .card {
 	line-height: 18px;
 }
 
-.btn-primary {
-	background-color: #387E60;
+.btn-primary, .right .github-fork-ribbon {
+	background-color: #579568;
   -moz-transition: all .2s ease-in;
   -o-transition: all .2s ease-in;
   -webkit-transition: all .2s ease-in;
   transition: all .2s ease-in;
 }
-.btn-primary:hover {
-	background-color: #579568;
+.btn-primary:hover, .right .github-fork-ribbon {
+	background-color: #387E60;
+}
+i.fa-heart {
+	color: #990000;
 }
 
 .well-guilds {
@@ -627,3 +612,106 @@ h1, h2, h3, h4, .card {
   .sharrre .box:hover .middle{
     width:90px;
   }
+
+/**
+ * Hover.css
+ */
+
+/* Grow Shadow */
+.hvr-grow-shadow {
+ display: inline-block;
+ vertical-align: middle;
+ -webkit-transform: translateZ(0);
+ transform: translateZ(0);
+ box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+ -webkit-backface-visibility: hidden;
+ backface-visibility: hidden;
+ -moz-osx-font-smoothing: grayscale;
+ -webkit-transition-duration: 0.3s;
+ transition-duration: 0.3s;
+ -webkit-transition-property: box-shadow, transform;
+ transition-property: box-shadow, transform;
+}
+.hvr-grow-shadow:hover, .hvr-grow-shadow:focus, .hvr-grow-shadow:active {
+ box-shadow: 0 10px 10px -10px rgba(0, 0, 0, 0.5);
+ -webkit-transform: scale(1.1);
+ transform: scale(1.1);
+}
+/* Shrink */
+.hvr-shrink {
+ -webkit-transform: translateZ(0);
+ transform: translateZ(0);
+ box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+ -webkit-backface-visibility: hidden;
+ backface-visibility: hidden;
+ -moz-osx-font-smoothing: grayscale;
+ -webkit-transition-duration: 0.3s;
+ transition-duration: 0.3s;
+ -webkit-transition-property: transform;
+ transition-property: transform;
+}
+.hvr-shrink:hover, .hvr-shrink:focus, .hvr-shrink:active {
+ -webkit-transform: scale(0.9);
+ transform: scale(0.9);
+}
+/* Grow Rotate */
+.hvr-grow-rotate {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+}
+.hvr-grow-rotate:hover, .hvr-grow-rotate:focus, .hvr-grow-rotate:active {
+  -webkit-transform: scale(1.1) rotate(4deg);
+  transform: scale(1.1) rotate(4deg);
+}
+/* Back Pulse */
+@-webkit-keyframes hvr-back-pulse {
+  50% {
+    background-color: rgba(32, 152, 209, 0.75);
+  }
+}
+
+@keyframes hvr-back-pulse {
+  50% {
+    background-color: rgba(20, 76, 67, 0.75);
+  }
+}
+
+.hvr-back-pulse {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -moz-osx-font-smoothing: grayscale;
+  overflow: hidden;
+  -webkit-transition-duration: 0.5s;
+  transition-duration: 0.5s;
+  -webkit-transition-property: color, background-color;
+  transition-property: color, background-color;
+}
+.hvr-back-pulse:hover, .hvr-back-pulse:focus, .hvr-back-pulse:active {
+  -webkit-animation-name: hvr-back-pulse;
+  animation-name: hvr-back-pulse;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-delay: 0.5s;
+  animation-delay: 0.5s;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  background-color: #387E60;
+  color: white;
+}

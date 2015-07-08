@@ -1,6 +1,6 @@
 <div class="navmenu navmenu-default navmenu-fixed-left offcanvas">
 	<a class="navmenu-brand text-center" href="#">
-		<?php echo $this->Html->link($this->Html->image('http://res.cloudinary.com/chrisvogt/image/upload/v1428239895/projects/wowchar/img/touch-icon-ipad.png', ['alt' => 'WoW Character Info']), '/', ['escape' => false, 'class' => 'nav-brand']); ?>
+		<?php echo $this->Html->link($this->Html->image('http://res.cloudinary.com/chrisvogt/image/upload/v1428239895/projects/wowchar/img/touch-icon-ipad.png', ['alt' => 'WoW Character Info']), '/', ['escape' => false, 'class' => 'nav-brand hvr-grow-rotate']); ?>
 	</a>
 	<div class="col-md-10 col-md-offset-1">
 		<?php
@@ -30,7 +30,7 @@
 				<span class="input-group-addon" id="txtCharacter"><i class="fa fa-user"></i></span>
 				<input type="text" name="character" class="form-control" placeholder="Character" aria-describedby="txtCharacter">
 			</div>
-			<?php echo $this->Form->submit('Load character', ['class' => 'btn btn-block btn-success']); ?>
+			<?php echo $this->Form->submit('Load character', ['class' => 'btn btn-block btn-primary']); ?>
 			<?php echo $this->Form->end(); ?>
 		</fieldset>
 		</form>

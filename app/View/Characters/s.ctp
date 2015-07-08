@@ -22,7 +22,7 @@
 						<div class="cardheader">
 						</div>
 						<div class="avatar">
-							<img alt="" src="<?php echo $character['thumbnail']; ?>">
+							<img alt="<?php echo $character['name'] . ' on ' . $character['realm']; ?>" class="hvr-grow-shadow" src="<?php echo $character['thumbnail']; ?>">
 						</div>
 						<div class="info">
 							<div class="title">
