@@ -35,13 +35,14 @@
 	<?php echo $this->Html->meta(['name' => 'description', 'content' => 'Find and share your World of Warcraft character stats online with this free, open-source tool.']); ?>
 	<?php echo $this->Html->meta(['name' => 'author', 'content' => '@C1V0']); ?>
 	<?php echo $this->Html->meta(['name' => 'robots', 'content' => 'index, follow']); ?>
+	<?php echo $this->Html->meta(['name' => 'theme-color', 'content' => '#579568']); ?>
   <?php
     if (isset($character)) :
 			echo $this->CharOg->build($character);
 		else:
 			echo $this->Html->meta(['property' => 'og:image', 'content' => $this->Html->Url('/img/og-banner.jpg', true)]);
 			echo $this->Html->meta(['property' => 'og:description', 'content' => 'Find and share your World of Warcraft character stats online with this free, open-source tool.']);
-			echo $this->Html->meta(['property' => 'og:author', 'content' => 'CHR1SV0GT']);
+			echo $this->Html->meta(['property' => 'og:author', 'content' => 'C1V0']);
 			echo $this->Html->meta(['name' => 'twitter:card', 'content' => 'summary_large_image']);
 			echo $this->Html->meta(['name' => 'twitter:site', 'content' => 'http://wowchar.info']);
 			echo $this->Html->meta(['name' => 'twitter:creator', 'content' => '@C1V0']);
@@ -76,7 +77,7 @@
   </head>
   <body>
     <?php if ($this->request->here !== '/') echo $this->Element('sidebar'); ?>
-    <div id="ghRibbon" class="github-fork-ribbon-wrapper right">
+    <div id="ghRibbon" class="hidden-xs hiddem-sm github-fork-ribbon-wrapper right">
       <div class="github-fork-ribbon hvr-back-pulse">
           <a href="https://github.com/chrisvogt/wowchar-info">Fork me on GitHub</a>
       </div>
