@@ -15,5 +15,9 @@ Requires `PHP >= 5.4`, `CakePHP 2.x`, and `Bower`. Uses [HttpSocket()](http://bo
 
 MIT
 
+## Screenshot
+
+[![WOWCHAR.info](webroot/img/screenshot.jpg)](http://wowchar.info)
+
 ___
 <img src="http://bower.io/img/bower-logo.svg" alt="Made with Bower" height="70" align="right"> <img src="webroot/img/cake-logo-smaller.png" alt="Made with CakePHP" height="70" align="right" /> <img src="webroot/img/php-med-trans.png" alt="Made with PHP" height="70" align="right">
