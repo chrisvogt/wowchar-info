@@ -60,7 +60,7 @@
 		<?php echo $this->Html->css([
 			'https://maxcdn.bootstrapcdn.com/bootswatch/3.3.4/darkly/bootstrap.min.css',
 			'/components/jasny-bootstrap/dist/css/jasny-bootstrap.min.css',
-			'https://fonts.googleapis.com/css?family=Raleway:300',
+			'http://fonts.googleapis.com/css?family=Titillium+Web:300',
 			'wowchar',
 			'/components/chosen/chosen.min.css',
 			'/components/font-awesome/css/font-awesome.min.css',

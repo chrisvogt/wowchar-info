@@ -30,6 +30,10 @@ h3 .fa {
 	font-size: .90em;
 }
 
+p, table, a.btn, footer, input {
+	font-family: 'Titillium Web', sans-serif;
+}
+
 .navbar-toggle {
 	float: left;
 	margin-left: 15px;
@@ -52,15 +56,20 @@ h3 .fa {
 }
 
 #jumbotron {
-	background: url("../img/banner-bg.jpg") no-repeat top center;
+	background: url("https://res.cloudinary.com/chrisvogt/image/upload/v1436837482/projects/wowchar/wow-banner.jpg") no-repeat center right;
+	background-size: cover;
 	text-shadow: 1px 1px 2px #181818;
 	padding: 24px;
 	position: relative;
 }
 
+#jumbotron h1 {
+	font-size: 3em;
+}
+
 #jumbotron img.logo {
-	width: 92px;
-	height: 92px;
+	width: 48px;
+	height: 48px;
 
 	-webkit-transition: width 2s, height 1s ease;
 	-moz-transition: width 2s, height 1s ease;
@@ -90,6 +99,16 @@ h3 .fa {
 	opacity: .4;
 }
 
+#jumbotron .attribution {
+	position: relative;
+	z-index: 44;
+	opacity: .4;
+}
+
+#jumbotron .attribution:hover {
+	opacity: 1;
+}
+
 .social {
 	min-height: 42px;
 	padding: 8px 0;
@@ -114,12 +133,11 @@ h3 .fa {
 p.intro {
 	font-size: 1.4em;
 	font-size: 300;
-	font-family: 'Raleway', sans-serif;
 	text-align: justify;
 }
 
 h1, h2, h3, h4, .card {
-	font-family: 'Raleway', sans-serif;
+	font-family: 'Titillium Web', sans-serif;
 	font-weight: 300;
 }
 
@@ -158,10 +176,6 @@ h1, h2, h3, h4, .card {
 		background: none;
 		border: none;
 	}
-	#jumbotron img.logo {
-		width: auto;
-		height: auto;
-	}
 }
 
 /* All devices smaller than medium (<992px) */
@@ -180,6 +194,13 @@ h1, h2, h3, h4, .card {
 
 	#jumbotron .lead {
 		font-size: .875em;
+	}
+
+	#jumbotron img.logo {
+		display: block;
+		margin: 0 auto 14px auto;
+		height: 58px;
+		width: 58px;
 	}
 }
 
@@ -379,7 +400,7 @@ h1, h2, h3, h4, .card {
 }
 
 .card.hovercard .cardheader {
-	background: url("../img/banner-bg.jpg") top center no-repeat;
+	background: url("https://res.cloudinary.com/chrisvogt/image/upload/v1436837482/projects/wowchar/wow-banner.jpg") no-repeat left center;
 	background-size: cover;
 	border-bottom: 1px solid #5B6A42;
 	height: 135px;
