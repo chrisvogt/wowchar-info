@@ -49,7 +49,7 @@ class WowApiConsumerComponent extends Component {
 /**
  * Location of the realms data.
  */
-	public $realmsUrl = 'https://raw.githubusercontent.com/chrisvogt/wow-profile-card/dev/data/realms.json?raw';
+	public $realmsUrl = 'http://eu.battle.net/api/wow/realm/status';
 
 /**
  * Character classes resource container.
