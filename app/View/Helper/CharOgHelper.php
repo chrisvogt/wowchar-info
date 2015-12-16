@@ -58,7 +58,7 @@ class CharOgHelper extends AppHelper {
 		];
 		$meta = '';
 		foreach($this->values as $name => $content) {
-			$meta .= $this->Html->meta(['name' => $name, 'content' => strtr($content, $results)]) . "\n    ";
+			$meta .= "\t" . $this->Html->meta(['name' => $name, 'content' => strtr($content, $results)]) . "\n    ";
 		}
 		return $meta;
 	}
