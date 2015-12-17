@@ -19,7 +19,10 @@
 			<div class="row">
 				<div class="col-md-12 col-sm-12">
 					<div class="card hovercard">
-						<div class="cardheader">
+						<div class="cardheader text-left">
+<a class="attribution" href="https://flic.kr/p/6DY4WU" title="Creative Commons artwork by SobControllers on Flikr">
+            <i class="fa fa-photo"></i>
+        </a>
 						</div>
 						<div class="avatar">
 							<img alt="<?php echo $character['name'] . ' on ' . $character['realm']; ?>" class="hvr-grow-shadow" src="<?php echo $character['thumbnail']; ?>">
