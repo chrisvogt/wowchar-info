@@ -30,7 +30,7 @@ html, body {
 
 body {
 	padding: 0;
-	background: url("../img/dark_mosaic.png") repeat #111111;
+    background-color: #080808;
 
 	transition:all 1s ease;
 	-o-transition:all 1s ease;
@@ -47,8 +47,14 @@ h3 .fa {
 	font-size: .90em;
 }
 
-p, table, a.btn, footer, input {
+table, a.btn, footer, input {
 	font-family: 'Lato', sans-serif;
+}
+
+p {
+    font-size: 1.6rem;
+    font-family: "Arial", sans-serif;
+    color: #efefef;
 }
 
 .navbar-toggle {
@@ -85,8 +91,6 @@ p, table, a.btn, footer, input {
 }
 
 #jumbotron img.logo {
-	height: 3.6rem;
-
 	-webkit-transition: width 2s, height 1s ease;
 	-moz-transition: width 2s, height 1s ease;
 	-o-transition: width 2s, height 1s ease;
@@ -100,19 +104,6 @@ p, table, a.btn, footer, input {
 #jumbotron .container {
 	z-index: 2;
 	position: relative;
-}
-
-#jumbotron:after {
-	content: '';
-	display: block;
-	position: absolute;
-	z-index: 1;
-	top: 0;
-	right: 0;
-	bottom: 0;
-	left: 0;
-	background: url(../img/3px-tile.png) repeat center center;
-	opacity: .4;
 }
 
 #jumbotron .attribution {
@@ -199,26 +190,21 @@ h1, h2, h3, h4, .card {
 		position: relative;
 		background: #579568;
 	}
-	.github-corner svg {
+	.page-character .github-corner svg {
 		top: 60px!important;
 	}
-
 	h1 {
 		font-size: 1.6em;
 	}
-
 	#jumbotron h1 {
 		font-size: 2.6em;
 	}
-
 	#jumbotron .lead {
 		font-size: .875em;
 	}
-
 	#jumbotron img.logo {
 		display: block;
 		margin: 0 auto 14px auto;
-		height: 1.6rem;
 	}
 }
 

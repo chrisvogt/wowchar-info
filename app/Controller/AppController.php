@@ -55,6 +55,13 @@ class AppController extends Controller {
 	];
 
 /**
+ * Helper classes to load.
+ *
+ * @var array
+ */
+    public $helpers = ['Page'];
+
+/**
  * beforeFilter() hook
  */
 	public function beforeFilter() {
