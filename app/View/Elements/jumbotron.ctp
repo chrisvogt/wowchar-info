@@ -12,9 +12,9 @@
 						<div class="col-lg-12 text-center">
 								<h1 class="tagline">
 									<?php echo $this->Html->image('../touch-icon-iphone-retina.png', ['class' => 'logo', 'height' => 48, 'width' => 48]); ?>
-									WoW Character Info
+									WoW Character Stats
 									</h1>
-								<p class="lead">Quickly share your WoW character's stats.</p>
+								<p class="lead">Lookup and share WoW character stats.</p>
 						</div>
 				</div>
 		</div>

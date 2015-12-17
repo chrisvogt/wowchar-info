@@ -37,6 +37,7 @@
 	</div>
 	<div class="col-md-10 col-md-offset-1">
 		<form style="margin-top: 48px;">
+            <label for="txtLink">Copy &amp; paste link:</label>
 			<div class="input-group">
 				<input type="text" id="txtLink" class="form-control" value="<?php echo Router::reverse($this->request, true); ?>">
 				<span class="input-group-btn">

@@ -24,7 +24,12 @@
 
 https://github.com/chrisvogt/wowchar-info
 */
-html, body {
+
+/**
+ * Reset & common
+ */
+html,
+body {
 	height: 100%;
 }
 
@@ -42,42 +47,49 @@ body {
 /**
  * Typography
  */
+a {
+    color: #579567;
+}
+a:hover {
+    color: #80B18D;
+    text-decoration: none;
+}
 h3 .fa {
 	color: #7C7C7C;
 	font-size: .90em;
 }
-
 table, a.btn, footer, input {
 	font-family: 'Lato', sans-serif;
 }
-
+.btn-primary {
+    background-color: #579568;
+    border: none;
+}
+.btn-primary:hover {
+    background-color: #206532;
+}
 p {
     font-size: 1.6rem;
     font-family: "Arial", sans-serif;
     color: #efefef;
 }
-
 .navbar-toggle {
 	float: left;
 	margin-left: 15px;
 }
-
 .navbar-static-top {
 	position: absolute;
 	margin-bottom: 0;
 }
-
 .navmenu-default, .navbar-default .navbar-offcanvas {
 	background: url("../img/paisley.png") repeat #fefefe;
 	border-right: 2px solid #375a7f;
 }
-
 .nav-brand {
 	display: inline-block;
 	text-align: center;
 	width: 100%;
 }
-
 #jumbotron {
 	background: url("https://res.cloudinary.com/chrisvogt/image/upload/v1436837482/projects/wowchar/wow-banner.jpg") no-repeat center right;
 	background-size: cover;
@@ -85,37 +97,32 @@ p {
 	padding: 24px;
 	position: relative;
 }
-
 #jumbotron h1 {
 	font-size: 3.6rem;
 }
-
 #jumbotron img.logo {
 	-webkit-transition: width 2s, height 1s ease;
 	-moz-transition: width 2s, height 1s ease;
 	-o-transition: width 2s, height 1s ease;
 	transition: width 2s, height 1s ease;
 }
-
 #jumbotron .lead {
 	font-size: 1em;
 }
-
 #jumbotron .container {
 	z-index: 2;
 	position: relative;
 }
-
-#jumbotron .attribution {
-	position: relative;
-	z-index: 44;
-	opacity: .4;
+.attribution {
+	position: absolute;
+    bottom: 14px;
+    left: 14px;
+	z-index: 55;
+	opacity: .45;
 }
-
-#jumbotron .attribution:hover {
+.attribution:hover {
 	opacity: 1;
 }
-
 .social {
 	min-height: 42px;
 	padding: 8px 0;
@@ -132,36 +139,32 @@ p {
 	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#45484d', endColorstr='#000000', GradientType=0); /* IE6-9 */
 	position: relative;
 }
-
 .social .fb-like {
 	color: #cecece;
 }
-
 p.intro {
 	font-size: 1.4em;
 	text-align: justify;
 }
-
 h1, h2, h3, h4, .card {
 	font-family: 'Lato', sans-serif;
 	font-weight: 400;
 }
-
+.offcanvas label {
+    color: #686868;
+}
 .quick-search .input-group {
 	margin-bottom: 8px;
 }
-
 .table-striped > tbody > tr:nth-of-type(odd) {
 	background: rgba(255, 255, 255, .1);
 }
-
 .chosen-container-single .chosen-single {
 	height: 43px !important;
 	border: none !important;
 	border-top-left-radius: 0 !important;
 	border-bottom-left-radius: 0 !important;
 }
-
 .chosen-single span {
 	padding: 10px 8px;
 	font-size: 15px;
@@ -209,7 +212,6 @@ h1, h2, h3, h4, .card {
 }
 
 /* CARD */
-
 .card {
 	padding-top: 20px;
 	margin: 10px 0 20px 0;
@@ -226,19 +228,16 @@ h1, h2, h3, h4, .card {
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
 }
-
 .card .card-heading {
 	padding: 0 20px;
 	margin: 0;
 }
-
 .card .card-heading.simple {
 	font-size: 20px;
 	font-weight: 300;
 	color: #777;
 	border-bottom: 1px solid #e5e5e5;
 }
-
 .card .card-heading.image img {
 	display: inline-block;
 	width: 46px;
@@ -250,7 +249,6 @@ h1, h2, h3, h4, .card {
 	-moz-border-radius: 50%;
 	border-radius: 50%;
 }
-
 .card .card-heading.image .card-heading-header {
 	display: inline-block;
 	vertical-align: top;
@@ -262,44 +260,36 @@ h1, h2, h3, h4, .card {
 	line-height: 16px;
 	color: #262626;
 }
-
 .card .card-heading.image .card-heading-header span {
 	font-size: 12px;
 	color: #999999;
 }
-
 .card .card-body {
 	padding: 0 20px;
 	margin-top: 20px;
 }
-
 .card .card-media {
 	padding: 0 20px;
 	margin: 0 -14px;
 }
-
 .card .card-media img {
 	max-width: 100%;
 	max-height: 100%;
 }
-
 .card .card-actions {
 	min-height: 30px;
 	padding: 0 20px 20px 20px;
 	margin: 20px 0 0 0;
 }
-
 .card .card-comments {
 	padding: 20px;
 	margin: 0;
 	background-color: #f8f8f8;
 }
-
 .card .card-comments .comments-collapse-toggle {
 	padding: 0;
 	margin: 0 20px 12px 20px;
 }
-
 .card .card-comments .comments-collapse-toggle a,
 .card .card-comments .comments-collapse-toggle span {
 	padding-right: 5px;
@@ -309,12 +299,10 @@ h1, h2, h3, h4, .card {
 	text-overflow: ellipsis;
 	white-space: nowrap;
 }
-
 .card-comments .media-heading {
 	font-size: 13px;
 	font-weight: bold;
 }
-
 .card.people {
 	position: relative;
 	display: inline-block;
@@ -325,11 +313,9 @@ h1, h2, h3, h4, .card {
 	overflow: hidden;
 	vertical-align: top;
 }
-
 .card.people:first-child {
 	margin-left: 0;
 }
-
 .card.people .card-top {
 	position: absolute;
 	top: 0;
@@ -339,15 +325,12 @@ h1, h2, h3, h4, .card {
 	height: 150px;
 	background-color: #ffffff;
 }
-
 .card.people .card-top.green {
 	background-color: #53a93f;
 }
-
 .card.people .card-top.blue {
 	background-color: #427fed;
 }
-
 .card.people .card-info {
 	position: absolute;
 	top: 150px;
@@ -360,7 +343,6 @@ h1, h2, h3, h4, .card {
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
 }
-
 .card.people .card-info .title {
 	display: block;
 	margin: 8px 14px 0 14px;
@@ -370,7 +352,6 @@ h1, h2, h3, h4, .card {
 	line-height: 18px;
 	color: #404040;
 }
-
 .card.people .card-info .desc {
 	display: block;
 	margin: 8px 14px 0 14px;
@@ -380,7 +361,6 @@ h1, h2, h3, h4, .card {
 	color: #737373;
 	text-overflow: ellipsis;
 }
-
 .card.people .card-bottom {
 	position: absolute;
 	bottom: 0;
@@ -394,7 +374,6 @@ h1, h2, h3, h4, .card {
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
 }
-
 .card.hovercard {
 	position: relative;
 	padding-top: 0;
@@ -402,20 +381,18 @@ h1, h2, h3, h4, .card {
 	background-color: rgba(0, 0, 0, 0.6);
 	border-bottom: 1px solid #495535;
 }
-
 .card.hovercard .cardheader {
+    position: relative;
 	background: url("https://res.cloudinary.com/chrisvogt/image/upload/v1436837482/projects/wowchar/wow-banner.jpg") no-repeat left center;
 	background-size: cover;
 	border-bottom: 1px solid #5B6A42;
 	height: 135px;
 }
-
 .card.hovercard .avatar {
 	position: relative;
 	top: -50px;
 	margin-bottom: -50px;
 }
-
 .card.hovercard .avatar img {
 	width: 100px;
 	height: 100px;
@@ -426,102 +403,75 @@ h1, h2, h3, h4, .card {
 	border-radius: 50%;
 	border: 5px solid rgba(255, 255, 255, 0.5);
 }
-
 .card.hovercard .info {
 	padding: 0 8px 10px;
 }
-
 .card.hovercard .info h2 {
 	margin: 0;
 	padding: 8px 0 8px;
 }
-
 .card.hovercard .info .title {
 	font-size: 24px;
 	line-height: 1;
 	color: #bebebe;
 	vertical-align: middle;
 }
-
 .card.hovercard .info .desc {
 	color: #cecece;
 	text-overflow: ellipsis;
 	font-style: italic;
 	margin-bottom: 1em;
 }
-
 .card.hovercard .bottom {
 	padding: 0 20px;
 	margin-bottom: 17px;
 }
-
 .hovercard .btn {
 	border-radius: 50%;
 	width: 32px;
 	height: 32px;
 	line-height: 18px;
 }
-
-.btn-primary, .right .github-fork-ribbon {
-	background-color: #579568;
-  -moz-transition: all .2s ease-in;
-  -o-transition: all .2s ease-in;
-  -webkit-transition: all .2s ease-in;
-  transition: all .2s ease-in;
-}
-.btn-primary:hover, .right .github-fork-ribbon {
-	background-color: #387E60;
-}
 i.fa-heart {
 	color: #990000;
 }
-
 .well-guilds {
 	background: rgba(20, 20, 20, .3);
 }
 .well-guilds h3 {
 	margin-top: 0;
 }
-
 .well-trans {
 	background: none;
 	padding-top: 0;
 	padding-bottom: 4px;
 }
-
 .well-guilds ul {
 	list-style-type: square;
 }
-
 .well-quick-stats i {
 	color: #989898;
 	margin-right: 8px;
 }
-
 .well-quick-stats th {
 	font-family: 'Raleway', sans-serif;
 	font-weight: 300;
 	color: #cecece;
 }
-
 .nav-search .input-group {
 	margin-bottom: 4px;
 }
-
 .navmenu h3 {
 	color: #989898;
 }
-
 .navmenu p {
 	color: #686868;
 }
-
 .share-button {
 	margin: 0 auto;
 	display: inline-block;
 	margin: 0 auto 24px auto;
 }
-
 .social.active {
 	z-index: 24;
 }
@@ -530,11 +480,9 @@ i.fa-heart {
 #recent h3 {
 	margin: 0 0 18px;
 }
-
 #recent p {
 	margin-top: 8px;
 }
-
 #recent span {
 	display: block;
 	font-size: .875em;

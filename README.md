@@ -1,8 +1,6 @@
-# WOWCHAR.info
+# WoW Character Stats
 
-[![Travis](https://img.shields.io/travis/chrisvogt/wowchar-info.svg?style=flat-square)](https://travis-ci.org/chrisvogt/wowchar-info)
-[![Code Climate](https://img.shields.io/codeclimate/github/chrisvogt/wowchar-info.svg?style=flat-square)](https://codeclimate.com/github/chrisvogt/wowchar-info)
-[![MIT License](https://img.shields.io/dub/l/vibe-d.svg?style=flat-square)](https://github.com/chrisvogt/wowchar-info/blob/master/LICENSE)
+> WOWCHAR.info
 
 <img src="webroot/img/preview.jpg" alt="Facebook share character preview" width="404" align="right">Uses the [Battle.net API](https://dev.battle.net/) to lookup and render WoW character stats.
 
