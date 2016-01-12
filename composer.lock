@@ -4,21 +4,21 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "9e6342aa482cb077f0fb3cc727701d1b",
-    "content-hash": "e390bcab8c5553d67e726031fd90858e",
+    "hash": "b68a4f41ad381baebca5c0e2cd0753e2",
+    "content-hash": "5b886b0e7c3b7e672771a9c989570165",
     "packages": [
         {
             "name": "ad7six/dsn",
-            "version": "0.3.1",
+            "version": "0.4.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/AD7six/php-dsn.git",
-                "reference": "649b42a6cc5878dacef8a3b41efbf72e133440c0"
+                "reference": "cb75d8d6660a5110876574815fbb4ad65d576d71"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/AD7six/php-dsn/zipball/649b42a6cc5878dacef8a3b41efbf72e133440c0",
-                "reference": "649b42a6cc5878dacef8a3b41efbf72e133440c0",
+                "url": "https://api.github.com/repos/AD7six/php-dsn/zipball/cb75d8d6660a5110876574815fbb4ad65d576d71",
+                "reference": "cb75d8d6660a5110876574815fbb4ad65d576d71",
                 "shasum": ""
             },
             "require": {
@@ -47,20 +47,20 @@
                 }
             ],
             "description": "A utility for parsing and generating service DSNs",
-            "time": "2014-05-31 16:17:08"
+            "time": "2015-03-28 07:40:11"
         },
         {
             "name": "cakephp/cakephp",
-            "version": "2.7.7",
+            "version": "2.7.8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/cakephp/cakephp.git",
-                "reference": "7aa6908800e9388d7fc7fdac37e8ae4ddc01ad7a"
+                "reference": "2ee72e2ad2340d707901dc7a5e8520f1cb235916"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/cakephp/cakephp/zipball/7aa6908800e9388d7fc7fdac37e8ae4ddc01ad7a",
-                "reference": "7aa6908800e9388d7fc7fdac37e8ae4ddc01ad7a",
+                "url": "https://api.github.com/repos/cakephp/cakephp/zipball/2ee72e2ad2340d707901dc7a5e8520f1cb235916",
+                "reference": "2ee72e2ad2340d707901dc7a5e8520f1cb235916",
                 "shasum": ""
             },
             "require": {
@@ -91,7 +91,7 @@
             "keywords": [
                 "framework"
             ],
-            "time": "2015-11-23 02:29:57"
+            "time": "2015-12-21 19:55:52"
         },
         {
             "name": "composer/installers",
@@ -259,20 +259,25 @@
         },
         {
             "name": "josegonzalez/dotenv",
-            "version": "0.3.0",
+            "version": "2.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/josegonzalez/php-dotenv.git",
-                "reference": "7979bc305f3a9a197d94db5f5d24d51ff7ab0871"
+                "reference": "eb9eb3beea37411d2f7b4960eed94fc72a592488"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/josegonzalez/php-dotenv/zipball/7979bc305f3a9a197d94db5f5d24d51ff7ab0871",
-                "reference": "7979bc305f3a9a197d94db5f5d24d51ff7ab0871",
+                "url": "https://api.github.com/repos/josegonzalez/php-dotenv/zipball/eb9eb3beea37411d2f7b4960eed94fc72a592488",
+                "reference": "eb9eb3beea37411d2f7b4960eed94fc72a592488",
                 "shasum": ""
             },
             "require": {
+                "m1/env": "2.*",
                 "php": ">=5.3.0"
+            },
+            "require-dev": {
+                "satooshi/php-coveralls": "1.*",
+                "squizlabs/php_codesniffer": "2.*"
             },
             "type": "library",
             "autoload": {
@@ -302,7 +307,65 @@
                 "dotenv",
                 "php"
             ],
-            "time": "2014-05-28 14:40:35"
+            "time": "2016-01-07 16:07:20"
+        },
+        {
+            "name": "m1/env",
+            "version": "2.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/m1/Env.git",
+                "reference": "6013b1475c21d4c7076e1aaad9df5b2fae060cbb"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/m1/Env/zipball/6013b1475c21d4c7076e1aaad9df5b2fae060cbb",
+                "reference": "6013b1475c21d4c7076e1aaad9df5b2fae060cbb",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "4.*",
+                "scrutinizer/ocular": "~1.1",
+                "squizlabs/php_codesniffer": "^2.3"
+            },
+            "suggest": {
+                "josegonzalez/dotenv": "For loading of .env",
+                "m1/vars": "For loading of configs"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "M1\\Env\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Miles Croxford",
+                    "email": "hello@milescroxford.com",
+                    "homepage": "http://milescroxford.com",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Env is a lightweight library bringing .env file parser compatibility to PHP. In short - it enables you to read .env files with PHP.",
+            "homepage": "https://github.com/m1/Env",
+            "keywords": [
+                ".env",
+                "config",
+                "dotenv",
+                "env",
+                "loader",
+                "m1",
+                "parser",
+                "support"
+            ],
+            "time": "2016-01-07 13:21:36"
         }
     ],
     "packages-dev": [
@@ -720,16 +783,16 @@
         },
         {
             "name": "symfony/yaml",
-            "version": "v2.8.0",
+            "version": "v2.8.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/yaml.git",
-                "reference": "f79824187de95064a2f5038904c4d7f0227fedb5"
+                "reference": "ac84cbb98b68a6abbc9f5149eb96ccc7b07b8966"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/yaml/zipball/f79824187de95064a2f5038904c4d7f0227fedb5",
-                "reference": "f79824187de95064a2f5038904c4d7f0227fedb5",
+                "url": "https://api.github.com/repos/symfony/yaml/zipball/ac84cbb98b68a6abbc9f5149eb96ccc7b07b8966",
+                "reference": "ac84cbb98b68a6abbc9f5149eb96ccc7b07b8966",
                 "shasum": ""
             },
             "require": {
@@ -765,13 +828,13 @@
             ],
             "description": "Symfony Yaml Component",
             "homepage": "https://symfony.com",
-            "time": "2015-11-30 12:35:10"
+            "time": "2015-12-26 13:37:56"
         }
     ],
     "aliases": [],
     "minimum-stability": "stable",
     "stability-flags": [],
-    "prefer-stable": true,
+    "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {
         "php": "~5.4"
