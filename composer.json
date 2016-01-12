@@ -10,12 +10,11 @@
   "homepage" : "http://wowchar.info",
   "license" : "MIT",
   "authors": [
-      {
-        "name": "Chris Vogt",
-        "homepage": "https://www.chrisvogt.me",
-      }
-    ]
-  },
+    {
+      "name": "Chris Vogt",
+      "homepage": "https://www.chrisvogt.me"
+    }
+  ],
   "require" : {
     "php" : "~5.4",
     "composer/installers" : "~1.0",
