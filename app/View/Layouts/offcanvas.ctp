@@ -64,7 +64,7 @@ endif;
     ]); ?>
     <![endif]-->
   </head>
-  <body class="<?php echo $this->Page->renderBodyClass($this->request->here); ?>">
+  <body class="<?php echo $this->Html->renderBodyClass($this->request->here); ?>">
     <?php if ($this->request->here !== '/') echo $this->Element('sidebar'); ?>
     <?php if ($this->request->here == '/') echo $this->Element('jumbotron'); ?>
 

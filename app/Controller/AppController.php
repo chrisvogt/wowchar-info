@@ -59,7 +59,11 @@ class AppController extends Controller {
  *
  * @var array
  */
-    public $helpers = ['Page'];
+    public $helpers = array(
+        'Html' => array(
+            'className' => 'MyHtml'
+        )
+    );
 
 /**
  * beforeFilter() hook

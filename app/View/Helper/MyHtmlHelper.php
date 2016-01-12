@@ -20,16 +20,21 @@
  * @since         CakePHP(tm) v 0.2.9
  * @license       http://www.opensource.org/licenses/mit-license.php MIT License
  */
-App::uses('AppHelper', 'Helper');
+App::uses('HtmlHelper', 'View/Helper');
 
 /**
  * Character Open Graph meta helper.
  *
  * @package       app.View.Helper
  */
-class PageHelper extends AppHelper {
+class MyHtmlHelper extends HtmlHelper {
 
-
+    /**
+     * Renders a body class attribute based on the location.
+     *
+     * @param String
+     * @return String
+     */
     public function renderBodyClass($here) {
         $class = '';
         if ($here === '/') {
