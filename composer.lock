@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "b68a4f41ad381baebca5c0e2cd0753e2",
-    "content-hash": "5b886b0e7c3b7e672771a9c989570165",
+    "hash": "8f22067a6b56c71e65f914ee52dcd6a7",
+    "content-hash": "6a127035d63ac8e8fa8c10e68d50e12e",
     "packages": [
         {
             "name": "ad7six/dsn",
@@ -259,25 +259,20 @@
         },
         {
             "name": "josegonzalez/dotenv",
-            "version": "2.0.0",
+            "version": "0.3.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/josegonzalez/php-dotenv.git",
-                "reference": "eb9eb3beea37411d2f7b4960eed94fc72a592488"
+                "reference": "7979bc305f3a9a197d94db5f5d24d51ff7ab0871"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/josegonzalez/php-dotenv/zipball/eb9eb3beea37411d2f7b4960eed94fc72a592488",
-                "reference": "eb9eb3beea37411d2f7b4960eed94fc72a592488",
+                "url": "https://api.github.com/repos/josegonzalez/php-dotenv/zipball/7979bc305f3a9a197d94db5f5d24d51ff7ab0871",
+                "reference": "7979bc305f3a9a197d94db5f5d24d51ff7ab0871",
                 "shasum": ""
             },
             "require": {
-                "m1/env": "2.*",
                 "php": ">=5.3.0"
-            },
-            "require-dev": {
-                "satooshi/php-coveralls": "1.*",
-                "squizlabs/php_codesniffer": "2.*"
             },
             "type": "library",
             "autoload": {
@@ -307,65 +302,7 @@
                 "dotenv",
                 "php"
             ],
-            "time": "2016-01-07 16:07:20"
-        },
-        {
-            "name": "m1/env",
-            "version": "2.0.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/m1/Env.git",
-                "reference": "6013b1475c21d4c7076e1aaad9df5b2fae060cbb"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/m1/Env/zipball/6013b1475c21d4c7076e1aaad9df5b2fae060cbb",
-                "reference": "6013b1475c21d4c7076e1aaad9df5b2fae060cbb",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.3.0"
-            },
-            "require-dev": {
-                "phpunit/phpunit": "4.*",
-                "scrutinizer/ocular": "~1.1",
-                "squizlabs/php_codesniffer": "^2.3"
-            },
-            "suggest": {
-                "josegonzalez/dotenv": "For loading of .env",
-                "m1/vars": "For loading of configs"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "M1\\Env\\": "src"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Miles Croxford",
-                    "email": "hello@milescroxford.com",
-                    "homepage": "http://milescroxford.com",
-                    "role": "Developer"
-                }
-            ],
-            "description": "Env is a lightweight library bringing .env file parser compatibility to PHP. In short - it enables you to read .env files with PHP.",
-            "homepage": "https://github.com/m1/Env",
-            "keywords": [
-                ".env",
-                "config",
-                "dotenv",
-                "env",
-                "loader",
-                "m1",
-                "parser",
-                "support"
-            ],
-            "time": "2016-01-07 13:21:36"
+            "time": "2014-05-28 14:40:35"
         }
     ],
     "packages-dev": [
