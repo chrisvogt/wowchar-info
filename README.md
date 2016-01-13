@@ -1,6 +1,7 @@
-# WoW Character Stats
+[![Build Status](https://img.shields.io/travis/chrisvogt/wowchar-info.svg?branch=master&style=flat-square)](https://travis-ci.org/chrisvogt/wowchar-info)
+[![GitHub license](https://img.shields.io/github/license/chrisvogt/wowchar-info.svg?branch=master&style=flat-square)](https://github.com/chrisvogt/wowchar-info/blob/master/LICENSE)
 
-> WOWCHAR.info
+# WoW Character Stats
 
 <img src="webroot/img/preview.jpg" alt="Facebook share character preview" width="404" align="right">Uses the [Battle.net API](https://dev.battle.net/) to lookup and render WoW character stats.
 
@@ -19,7 +20,7 @@ Requires `PHP 5.4+`, `composer`, and `npm`.
 
 ### License
 
-[MIT License](LICENSE)
+[MIT](LICENSE) © [Chris Vogt](https://www.chrisvogt.me).
 
 ### Built with
 
