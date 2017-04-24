@@ -30,7 +30,7 @@ class WowApiConsumerComponent extends Component {
  *
  * @var string
  */
-	public $baseUrl = 'http://us.battle.net/api/wow/';
+	public $baseUrl = 'https://us.api.battle.net/wow/';
 
 /**
  * The base URL for thumbnails.
@@ -44,12 +44,12 @@ class WowApiConsumerComponent extends Component {
  *
  * @var string
  */
-	public $profileBaseUrl = 'http://us.battle.net/wow/en/character/';
+	public $profileBaseUrl = 'https://us.battle.net/wow/en/character/';
 
 /**
  * Location of the realms data.
  */
-	public $realmsUrl = 'http://eu.battle.net/api/wow/realm/status';
+	public $realmsUrl = 'https://us.api.battle.net/wow/realm/status';
 
 /**
  * Character classes resource container.
@@ -213,7 +213,8 @@ class WowApiConsumerComponent extends Component {
 		}
 		$validResources = ['classes', 'races'];
 		if (in_array($type, $validResources)) {
-			$requestUrl = $this->baseUrl . 'data/character/' . $type . '?fields=appearance&jsonp=';
+            $apiKey = env('BLIZZARD_API_KEY');
+			$requestUrl = $this->baseUrl . 'data/character/' . $type . "?fields=appearance&apikey={$apiKey}&jsonp=";
 			$response = $this->makeRequest($requestUrl);
 			Cache::write($type, $this->extractResource($response[$type]), 'resource');
 			return $this->extractResource($response[$type]);
@@ -233,7 +234,7 @@ class WowApiConsumerComponent extends Component {
 		if (Cache::read('realms', 'resource')) {
 			return Cache::read('realms', 'resource');
 		} else {
-			$res = $this->makeRequest($this->realmsUrl);
+			$res = $this->makeRequest($this->buildQuery('realms'));
 			for ($i = 0; $i < count($res['realms']); $i++) {
 				$this->realms[$res['realms'][$i]['slug']] = $res['realms'][$i]['name'];
 			}
@@ -278,9 +279,16 @@ class WowApiConsumerComponent extends Component {
 	public function buildQuery($type) {
 		switch ($type) {
 			case 'character':
-				$requestUrl = $this->baseUrl . $type . DS . $this->realmName . DS . $this->characterName . '?jsonp=';
+				$requestUrl = $this->baseUrl . $type . DS . $this->realmName . DS . $this->characterName;
 				break;
+            case 'realms':
+                $requestUrl = $this->realmsUrl ;
+                break;
 		}
+
+        $apiKey = env('BLIZZARD_API_KEY');
+        $requestUrl .= "?apikey={$apiKey}&jsonp=";
+
 		return $requestUrl;
 	}
 
