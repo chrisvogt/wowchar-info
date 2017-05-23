@@ -37,7 +37,7 @@ class WowApiConsumerComponent extends Component {
  *
  * @var string
  */
-	public $thumbBaseUrl = 'http://us.battle.net/static-render/us/';
+	public $thumbBaseUrl = 'https://us.battle.net/static-render/us/';
 
 /**
  * The base URL for profile links.
