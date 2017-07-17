@@ -75,7 +75,7 @@ class WowApiConsumerComponentTest extends CakeTestCase {
 	 * @return void
 	 */
 		public function testExtProfileLink() {
-			$expects = 'http://us.battle.net/wow/en/character/emerald-dream/carilliya/simple';
+			$expects = 'https://us.battle.net/wow/en/character/emerald-dream/carilliya/simple';
 			$result = $this->WowApiConsumer->buildExtLink('Carilliya', 'emerald-dream');
 
 			$this->assertNotNull($result);
