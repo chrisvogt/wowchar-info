@@ -21,7 +21,9 @@
     "cakephp/cakephp" : "~2",
     "friendsofcake/crud" : "~3",
     "josegonzalez/dotenv": "0.3.*",
-    "ad7six/dsn": "0.4.*"
+    "ad7six/dsn": "0.4.*",
+    "depotwarehouse/oauth2-bnet": "^5.0",
+    "league/oauth2-client": "^1.4"
   },
   "require-dev": {
     "cakephp/debug_kit" : "~2",
