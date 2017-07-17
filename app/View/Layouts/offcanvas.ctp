@@ -71,8 +71,8 @@ endif;
     <div class="container">
             <?php echo $this->Session->flash(); ?>
             <?php echo $this->fetch('content'); ?>
-            <footer>
-                <p><img class="pull-right" src="http://cakephp.org/img/default/cake-logo-smaller2.png" /> <i class="fa fa-code"></i> with <i class="fa fa-heart"></i> by <a href="https://twitter.com/c1v0">@c1v0</a>.</p>
+            <footer class="text-center">
+                <p><i class="fa fa-code"></i> with <i class="fa fa-heart"></i> by <a href="https://twitter.com/c1v0">@c1v0</a>.</p>
             </footer>
     </div>
 
