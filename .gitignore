@@ -4,6 +4,6 @@
 /tmp
 /Plugin
 /vendor
-/fos/components
+/public/components
 /node_modules
 .vagrant

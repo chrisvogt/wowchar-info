@@ -7,7 +7,7 @@ module.exports = function(grunt) {
 
 	grunt.initConfig({
 		pkg: grunt.file.readJSON('package.json'),
-		app: 'fos',
+		app: 'public',
 		dist: 'webroot',
 
 		sass: {
@@ -101,22 +101,22 @@ module.exports = function(grunt) {
 		concat: {
           css: {
             src: [
-                'fos/components/bootswatch-dist/css/bootstrap.min.css',
-                'fos/components/jasny-bootstrap/dist/css/jasny-bootstrap.min.css',
+                'public/components/bootswatch-dist/css/bootstrap.min.css',
+                'public/components/jasny-bootstrap/dist/css/jasny-bootstrap.min.css',
                 '<%= app %>/css/wowchar.css',
-                'fos/components/chosen/chosen.min.css',
-                'fos/components/font-awesome/css/font-awesome.min.css'
+                'public/components/chosen/chosen.min.css',
+                'public/components/font-awesome/css/font-awesome.min.css'
             ],
             dest: '<%= app %>/css/app.css'
           },
 		  js: {
 		    src: [
-		    	'fos/components/jquery/dist/jquery.min.js',
-		    	'fos/components/bootstrap/dist/js/bootstrap.min.js',
-		    	'fos/components/jasny-bootstrap/dist/js/jasny-bootstrap.min.js',
-		    	'fos/components/sharrre/jquery.sharrre.min.js',
-		    	'fos/components/zeroclipboard/dist/ZeroClipboard.min.js',
-		    	'fos/components/chosen/chosen.jquery.min.js'
+		    	'public/components/jquery/dist/jquery.min.js',
+		    	'public/components/bootstrap/dist/js/bootstrap.min.js',
+		    	'public/components/jasny-bootstrap/dist/js/jasny-bootstrap.min.js',
+		    	'public/components/sharrre/jquery.sharrre.min.js',
+		    	'public/components/zeroclipboard/dist/ZeroClipboard.min.js',
+		    	'public/components/chosen/chosen.jquery.min.js'
 	    	],
 		    dest: '<%= dist %>/js/libraries.js'
 		  },
